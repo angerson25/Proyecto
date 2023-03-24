@@ -1,5 +1,6 @@
 package vista;
-
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JFrame;
 
 public class VentanaPrincipal extends JFrame
@@ -11,6 +12,8 @@ public class VentanaPrincipal extends JFrame
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultado;
     public DialogoMoverCarro miDialogoMoverCarro;
+    private JLabel lbImagen;
+    private ImageIcon iImagen;
 
     //-------------------------
     //Métodos
@@ -23,32 +26,20 @@ public class VentanaPrincipal extends JFrame
         setLayout(null);
         
         
-        //Creación y adición del PanelEntradaDatos
-        miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(10,10,380,190);
-        add(miPanelEntradaDatos);
-       
         
-        //Creación y adición del PanelOperaciones
-        miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,220,380,60);
-        add(miPanelOperaciones);
-        
-        //Creación y adición del PanelOperaciones
-        miPanelResultado = new PanelResultados();
-        miPanelResultado.setBounds(10,290,380,250);
-        add(miPanelResultado);
         
         miDialogoMoverCarro = null;
         
         //Caracteristicas de la ventana
-        setTitle("Carro");
-        setSize(400,600);
+        setTitle("Niños con dislexia");
+        setSize(900,600);
         //setLocation(10,10);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setVisible(true);
+
+        
     }
     
     //Crear ventana dialogo Mover
