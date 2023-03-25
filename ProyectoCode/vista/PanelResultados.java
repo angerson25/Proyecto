@@ -38,10 +38,7 @@ public class PanelResultados extends JPanel
         add(spResultado);
        
         
-        //Borde y titulo del panel
-        TitledBorder borde = BorderFactory.createTitledBorder("Resultados");
-        borde.setTitleColor(Color.BLUE);
-        setBorder(borde);
+        
     }
     
     //Borar los resultados

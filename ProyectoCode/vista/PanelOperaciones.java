@@ -10,10 +10,7 @@ public class PanelOperaciones extends JPanel
     //----------------------
     //Atributos
     //----------------------
-    public JButton bCrear;
-    public JButton bMover;
-    public JButton bAcelerar;
-    public JButton bFrenar;
+    
     
     //----------------------
     //Metodos
