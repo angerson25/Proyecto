@@ -9,7 +9,7 @@ import javax.swing.border.TitledBorder;
 
 /**
  *
- * @author matias
+ * 
  */
 public class PanelResultados extends JPanel
 {

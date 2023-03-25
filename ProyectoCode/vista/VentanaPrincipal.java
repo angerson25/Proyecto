@@ -11,7 +11,7 @@ public class VentanaPrincipal extends JFrame
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultado;
-    public DialogoMoverCarro miDialogoMoverCarro;
+    
     private JLabel lbImagen;
     private ImageIcon iImagen;
 
@@ -28,7 +28,7 @@ public class VentanaPrincipal extends JFrame
         
         
         
-        miDialogoMoverCarro = null;
+       
         
         //Caracteristicas de la ventana
         setTitle("Niños con dislexia");
@@ -42,9 +42,4 @@ public class VentanaPrincipal extends JFrame
         
     }
     
-    //Crear ventana dialogo Mover
-    public void crearDialogoMover()
-    {
-        miDialogoMoverCarro = new DialogoMoverCarro();
-    }
 }
