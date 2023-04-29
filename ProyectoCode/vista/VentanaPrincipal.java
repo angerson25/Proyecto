@@ -25,14 +25,16 @@ public class VentanaPrincipal extends JFrame
         //Definición del contenedor de la ventana
         setLayout(null);
         
-        
+        miPanelOperaciones = new PanelOperaciones();
+        miPanelOperaciones.setBounds(10,10,860,540);
+        this.add(miPanelOperaciones);
         
         
        
         
         //Caracteristicas de la ventana
         setTitle("Niños con dislexia");
-        setSize(900,600);
+        setSize(900,556);
         //setLocation(10,10);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
