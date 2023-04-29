@@ -1,8 +1,11 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -15,6 +18,7 @@ public class PanelOperaciones extends JPanel
     //----------------------
     private JLabel lbImagen;
     private ImageIcon iImagen;
+    private JButton btEntrar;
     
     //----------------------
     //Metodos
@@ -32,7 +36,19 @@ public class PanelOperaciones extends JPanel
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
+        //Boton Entrar 
+        btEntrar = new JButton("Entrar");
+        btEntrar.setBounds(50,430,170,50); 
+        btEntrar.setActionCommand("Entrar");
+        Color purpura =new Color(155,175,175);
+        btEntrar.setBackground(purpura);
+        this.add(btEntrar);
+
         
+    }
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+       btEntrar.addActionListener(pAL);
     }
 
     
