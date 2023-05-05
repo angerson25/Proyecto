@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-public class PanelOperaciones extends JPanel
+public class PanelEntrada extends JPanel
 {
     //----------------------
     //Atributos
@@ -25,7 +25,7 @@ public class PanelOperaciones extends JPanel
     //----------------------
     
     //Constructor
-    public PanelOperaciones()
+    public PanelEntrada()
     {
         //Definicion del contendor del panel
         setLayout(null);
@@ -39,9 +39,9 @@ public class PanelOperaciones extends JPanel
         //Boton Entrar 
         btEntrar = new JButton("Entrar");
         btEntrar.setBounds(50,430,170,50); 
-        btEntrar.setActionCommand("Entrar");
-        Color purpura =new Color(155,175,175);
-        btEntrar.setBackground(purpura);
+        btEntrar.setActionCommand("entrar");
+        Color morado =new Color(220,51,209);
+        btEntrar.setBackground(morado);
         this.add(btEntrar);
 
         

@@ -9,8 +9,8 @@ public class VentanaPrincipal extends JFrame
     //Atributos
     //----------------------
     public PanelEntradaDatos miPanelEntradaDatos;
-    public PanelOperaciones miPanelOperaciones;
-    public PanelResultados miPanelResultado;
+    public PanelEntrada miPanelEntrada;
+    public PanelMenu miPanelMenu = null;
     
     private JLabel lbImagen;
     private ImageIcon iImagen;
@@ -25,9 +25,10 @@ public class VentanaPrincipal extends JFrame
         //Definición del contenedor de la ventana
         setLayout(null);
         
-        miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,10,860,540);
-        this.add(miPanelOperaciones);
+        miPanelEntrada = new PanelEntrada();
+        miPanelEntrada.setBounds(10,10,860,540);
+
+        this.add(miPanelEntrada);
         
         
        
@@ -42,6 +43,11 @@ public class VentanaPrincipal extends JFrame
         setVisible(true);
 
         
+    }
+    //Crear menu
+    public void crearMenu()
+    {
+        miPanelMenu = new PanelMenu();
     }
     
 }

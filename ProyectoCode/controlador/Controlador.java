@@ -23,7 +23,7 @@ public class Controlador implements ActionListener
     {
         this.venPrin = pVenPrin;
         this.model = pModel;
-        
+        this.venPrin.miPanelEntrada.agregarOyentesBotones(this);
         
     }
     
@@ -32,6 +32,13 @@ public class Controlador implements ActionListener
     {
         //Identificar el comendo generado (calcular, borrar, salir)
         String comando = ae.getActionCommand();
+
+        if(comando.equals("entrar"))
+        {
+            System.out.print("funcionando");
+            venPrin.crearMenu();
+            this.venPrin.miPanelMenu.agregarOyenteBoton(this);
+        }
         
         
         
