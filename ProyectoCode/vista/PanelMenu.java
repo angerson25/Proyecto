@@ -29,7 +29,7 @@ public class PanelMenu extends JDialog
         this.setLayout(null);
 
         //Crear y agregar elementos
-        lbNombreVendedor = new JLabel("Vendedor: ");
+        lbNombreVendedor = new JLabel("Menu : ");
         lbNombreVendedor.setBounds(10,50,140,20);
         this.add(lbNombreVendedor);
 
