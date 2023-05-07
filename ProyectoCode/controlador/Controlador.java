@@ -36,7 +36,7 @@ public class Controlador implements ActionListener
 
         if(comando.equals("entrar"))
         {
-            System.out.print("funcionando");
+            
             venPrin.crearMenu();
             this.venPrin.miPanelMenu.agregarOyenteBoton(this);
         }

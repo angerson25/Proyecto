@@ -12,13 +12,7 @@ public class PanelMenu extends JDialog
     //----------------------
     // Atributos
     //----------------------
-    private JLabel lbNombreVendedor;
-    private JLabel lbCedula;
-    private JLabel lbEdad;
-    private JTextField tfNombreVendedor;
-    private JTextField tfCedula;
-    private JTextField tfEdad;
-    private JButton btAgregarVendedor;
+    private JButton btJugar1;
 
     //----------------------
     // Metodos
@@ -28,65 +22,26 @@ public class PanelMenu extends JDialog
         //Definición del layout del Dialogo
         this.setLayout(null);
 
-        //Crear y agregar elementos
-        lbNombreVendedor = new JLabel("Menu : ");
-        lbNombreVendedor.setBounds(10,50,140,20);
-        this.add(lbNombreVendedor);
-
-        lbCedula = new JLabel("Cedula  : ");
-        lbCedula.setBounds(10,80,140,20);
-        this.add(lbCedula);
-
-        lbEdad = new JLabel("Edad : ");
-        lbEdad.setBounds(10,110,140,20);
-        this.add(lbEdad);
-
-        tfNombreVendedor = new JTextField();
-        tfNombreVendedor.setBounds(150,50,100, 25);
-        this.add(tfNombreVendedor);
-
-        tfCedula = new JTextField();
-        tfCedula.setBounds(150,80,100, 25);
-        this.add(tfCedula);
-
-        tfEdad = new JTextField();
-        tfEdad.setBounds(150,110,100, 25);
-        this.add(tfEdad);
-
-        btAgregarVendedor = new JButton("Agregar");
-        btAgregarVendedor.setBounds(20,140,260,25);
-        btAgregarVendedor.setActionCommand("agregar");
-        this.add(btAgregarVendedor);
+        //creacion boton jugar1
+        JButton btJugar1 = new JButton("Jugar");
+        btJugar1.setBounds(50,50,170,50);
+        this.add(btJugar1);
+        btJugar1.setActionCommand("jugar1");
 
         //Caracteristicas de la ventana
-        this.setTitle("Agregar Vendedor");
+        this.setTitle("Aplicacion para personas con Dislexia");
         this.setSize(900,556);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
     }
 
-    //Metodos de acceso
-    public String getNombreVendedor()
-    {
-        return tfNombreVendedor.getText();
-    }
-    public String getCedula()
-    {
-        return tfCedula.getText();
-    }
-    public String getEdad()
-    {
-        return tfEdad.getText();
-    }
+
 
     public void agregarOyenteBoton(ActionListener pAL)
     {
-        btAgregarVendedor.addActionListener(pAL);
+        btJugar1.addActionListener(pAL);
     }
 
-    public void cerrarDialogoAgregarVendedor()
-    {
-        this.dispose();
-    }
+    
 }
