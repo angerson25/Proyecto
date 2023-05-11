@@ -25,6 +25,7 @@ public class Controlador implements ActionListener
         this.venPrin = pVenPrin;
         this.model = pModel;
         this.venPrin.miPanelEntrada.agregarOyentesBotones(this);
+        this.venPrin.miJugar1.agregarOyentesBotones(this);
         
     }
     
@@ -39,6 +40,14 @@ public class Controlador implements ActionListener
             
             venPrin.crearMenu();
             this.venPrin.miPanelMenu.agregarOyenteBoton(this);
+        }
+
+        //abrir la ventana de dialogo jugar1
+        if(comando.equals("jugar"))
+        {
+            System.out.println("hola");
+            venPrin.crearJugar1();
+            this.venPrin.miJugar1.agregarOyentesBotones(this);
         }
         
         
