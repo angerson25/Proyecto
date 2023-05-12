@@ -5,6 +5,8 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 
 
 public class PanelMenu extends JDialog
@@ -13,7 +15,8 @@ public class PanelMenu extends JDialog
     // Atributos
     //----------------------
     private JButton btJugar1;
-
+    private JLabel lbImagen;
+    private ImageIcon iImagen;
     //----------------------
     // Metodos
     //----------------------
@@ -29,6 +32,12 @@ public class PanelMenu extends JDialog
         Color blanco =new Color(255,255,255);
         btJugar1.setBackground(blanco);
         this.add(btJugar1);
+
+        //creacion y adicion de la imagen
+        iImagen = new ImageIcon(getClass().getResource("/vista/panelMenu.png"));
+        lbImagen= new JLabel(iImagen);
+        lbImagen.setBounds(0,0,900,506);
+        add(lbImagen);
 
         //Caracteristicas de la ventana
         this.setTitle("menu");

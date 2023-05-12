@@ -82,14 +82,15 @@ public class Jugar1 extends JDialog
             Color lbLColor =new Color(255, 0, 0, 128);
             this.add(lbL);
 
-            tfLetra = new JTextField();
-            tfLetra.setBounds(150,110,100, 25);
-            this.add(tfLetra);
+
 
 
 
 
         }
+        tfLetra = new JTextField();
+        tfLetra.setBounds(150,110,100, 25);
+        this.add(tfLetra);
         
 
 

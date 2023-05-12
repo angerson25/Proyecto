@@ -36,6 +36,7 @@ public class PanelEntrada extends JPanel
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
+        
         //Boton Entrar 
         btEntrar = new JButton("Entrar");
         btEntrar.setBounds(50,430,170,50); 

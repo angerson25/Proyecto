@@ -14,6 +14,7 @@ public class Controlador implements ActionListener
     //----------------------------
     private VentanaPrincipal venPrin;
     private Disle model;
+    private Object miPanelEntrada;
     
     
     //----------------------------
