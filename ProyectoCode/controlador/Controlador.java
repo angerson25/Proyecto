@@ -45,7 +45,7 @@ public class Controlador implements ActionListener
         }
 
         //abrir la ventana de dialogo jugar1
-        if(comando.equals("jugar"))
+        if(comando.equals("jugar1"))
         {
             venPrin.crearJugar1();
             this.venPrin.miJugar1.agregarOyentesBotones(this);
