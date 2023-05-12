@@ -96,7 +96,10 @@ public class Jugar1 extends JDialog
 
 
     }
-
+    public void agregarOyentesBotones(ActionListener pAL)
+    {
+        btJugar1.addActionListener(pAL);
+    }
 
 
     

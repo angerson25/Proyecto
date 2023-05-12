@@ -5,8 +5,12 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
+import java.lang.ProcessBuilder.Redirect;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import java.awt.Font;
+import java.awt.Transparency;
 
 
 public class PanelMenu extends JDialog
@@ -17,6 +21,7 @@ public class PanelMenu extends JDialog
     private JButton btJugar1;
     private JLabel lbImagen;
     private ImageIcon iImagen;
+    private JLabel lbActividades;
     //----------------------
     // Metodos
     //----------------------
@@ -25,11 +30,18 @@ public class PanelMenu extends JDialog
         //Definición del layout del Dialogo
         this.setLayout(null);
 
+        //creacion de los labels
+        lbActividades= new JLabel("ACTIVIDADES",JLabel.RIGHT);
+        lbActividades.setFont(new Font("Arial", Font.BOLD, 35));
+        lbActividades.setBounds(300,90,250,40);
+        Color blanco =new Color(255,255,255);
+        lbActividades.setForeground(blanco);
+        add(lbActividades);
+
         //creacion boton jugar1
         btJugar1 = new JButton("Jugar");
         btJugar1.setBounds(50,430,170,50); 
         btJugar1.setActionCommand("jugar");
-        Color blanco =new Color(255,255,255);
         btJugar1.setBackground(blanco);
         this.add(btJugar1);
 

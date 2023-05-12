@@ -48,7 +48,7 @@ public class Controlador implements ActionListener
         if(comando.equals("jugar"))
         {
             venPrin.crearJugar1();
-            this.venPrin.miPanelMenu.agregarOyentesBotones(this);
+            this.venPrin.miJugar1.agregarOyentesBotones(this);
         }
         
         
