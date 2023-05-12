@@ -58,28 +58,23 @@ public class Jugar1 extends JDialog
         // Crear los labels y agregarlos al panel
         if (palabraAleatoria.equals("ARBOL")){
             JLabel lbA = new JLabel("A");
-            lbA.setBounds(100, 100, 100, 100);
-            Color lbAColor =new Color(255, 0, 0, 128);
+            lbA.setBounds(100, 100, 100, 100); 
             this.add(lbA);
 
             JLabel lbR = new JLabel("R");
             lbR.setBounds(200, 100, 100, 100);
-            Color lbRColor =new Color(255, 0, 0, 128);
             this.add(lbR);
 
             JLabel lbB = new JLabel("B");
             lbB.setBounds(300, 100, 100, 100);
-            Color lbBColor =new Color(255, 0, 0, 128);
             this.add(lbB);
 
             JLabel lbO = new JLabel("O");
             lbO.setBounds(400, 100, 100, 100);
-            Color lbOColor =new Color(255, 0, 0, 128);
             this.add(lbO);
 
             JLabel lbL = new JLabel("L");
             lbL.setBounds(500, 100, 100, 100);
-            Color lbLColor =new Color(255, 0, 0, 128);
             this.add(lbL);
 
 

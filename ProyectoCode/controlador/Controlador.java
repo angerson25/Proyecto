@@ -50,7 +50,13 @@ public class Controlador implements ActionListener
             venPrin.crearJugar1();
             this.venPrin.miJugar1.agregarOyentesBotones(this);
         }
-        
+
+        //abrir la ventana de dialogo jugar1
+        if(comando.equals("jugar2"))
+        {
+            venPrin.crearJugar2();
+            this.venPrin.miJugar2.agregarOyentesBotones(this);
+        }        
         
         
         

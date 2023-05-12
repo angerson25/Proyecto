@@ -12,6 +12,7 @@ public class VentanaPrincipal extends JFrame
     public PanelEntrada miPanelEntrada;
     public PanelMenu miPanelMenu = null;
     public Jugar1 miJugar1 = null;
+    public Jugar2 miJugar2 =null;
     
     private JLabel lbImagen;
     private ImageIcon iImagen;
@@ -55,6 +56,12 @@ public class VentanaPrincipal extends JFrame
     public void crearJugar1()
     {
         miJugar1 = new Jugar1();
+    }
+
+    //Crear jugar2
+    public void crearJugar2()
+    {
+        miJugar2 = new Jugar2();
     }
     
 }
