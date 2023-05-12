@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.Disle;
 import vista.VentanaPrincipal;
+import vista.PanelMenu;
 
 public class Controlador implements ActionListener
 {
@@ -25,7 +26,7 @@ public class Controlador implements ActionListener
         this.venPrin = pVenPrin;
         this.model = pModel;
         this.venPrin.miPanelEntrada.agregarOyentesBotones(this);
-        this.venPrin.miJugar1.agregarOyentesBotones(this);
+        this.venPrin.miPanelMenu.agregarOyentesBotones(this);
         
     }
     
@@ -39,15 +40,14 @@ public class Controlador implements ActionListener
         {
             
             venPrin.crearMenu();
-            this.venPrin.miPanelMenu.agregarOyenteBoton(this);
+            this.venPrin.miPanelMenu.agregarOyentesBotones(this);
         }
 
         //abrir la ventana de dialogo jugar1
         if(comando.equals("jugar"))
         {
-            System.out.println("hola");
             venPrin.crearJugar1();
-            this.venPrin.miJugar1.agregarOyentesBotones(this);
+            this.venPrin.miPanelMenu.agregarOyentesBotones(this);
         }
         
         

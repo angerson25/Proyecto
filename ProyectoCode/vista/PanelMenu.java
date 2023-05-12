@@ -36,11 +36,14 @@ public class PanelMenu extends JDialog
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
+        
     }
 
 
 
-    public void agregarOyenteBoton(ActionListener pAL)
+
+
+    public void agregarOyentesBotones(ActionListener pAL)
     {
         btJugar1.addActionListener(pAL);
     }
