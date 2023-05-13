@@ -28,7 +28,8 @@ public class Controlador implements ActionListener
         this.model = pModel;
         this.venPrin.miPanelEntrada.agregarOyentesBotones(this);
         this.venPrin.miPanelMenu.agregarOyentesBotones(this);
-        this.venPrin.miJugar2.agregarOyentesBotones(this);
+        
+        
         
     }
     
@@ -56,15 +57,13 @@ public class Controlador implements ActionListener
         if(comando.equals("jugar2"))
         {
             venPrin.crearJugar2();
-            this.venPrin.miJugar2.agregarOyentesBotones(this);
+            
+            
         }        
         //abrir el dialogo J2
-        if(comando.equals("comprobarJ2"))
-        {
-            venPrin.crearDJ2();
-            
-        } 
         
+       
         
+
     }    
 }

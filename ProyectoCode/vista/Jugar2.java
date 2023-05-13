@@ -4,7 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
+import java.awt.event.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,8 +13,9 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Font;
+import vista.VentanaPrincipal;
 
-public class Jugar2 extends JDialog implements ActionListener
+public class Jugar2 extends JDialog implements ActionListener 
 {
 
     //----------------------
@@ -25,22 +26,13 @@ public class Jugar2 extends JDialog implements ActionListener
     private JTextField tfLetra;
     private JLabel lbPalabraInvertida;
     private JLabel lbArreglaPalabra;
-
+    public DialogoJ2 miDialogoJ2 =null;
+    private String palabraInvertida;
+    private String palabraAleatoria;
     //----------------------
     // Metodos
     //----------------------
-    @Override
-    public void actionPerformed(ActionEvent ae) 
-    {
-        //Identificar el comendo generado (calcular, borrar, salir)
-        String comando = ae.getActionCommand();
-        
-
-        if(comando.equals("entrar"))
-        {
-            
-        }
-    }
+    
     public Jugar2()
     {
         //Definición del layout del Dialogo
@@ -52,18 +44,36 @@ public class Jugar2 extends JDialog implements ActionListener
         palabras.add("LAPICERO");
         palabras.add("MOTO");
         palabras.add("NAVIDAD");
+        palabras.add("BIGOTE");
+        palabras.add("MUÑECA");
+        palabras.add("CEREBRO");
+        palabras.add("ABDOMEN");
+        palabras.add("ESPALDA");
+        palabras.add("DIARREA");
+        palabras.add("REPRODUCCION");
+        palabras.add("ELEFANTE");
+        palabras.add("CARACOL");
+        palabras.add("VEGETAL");
+        palabras.add("PATATA");
+        palabras.add("MANZANA");
+        palabras.add("GASEOSA");
+        palabras.add("CALENDARIO");
+        palabras.add("ANOCHECER");
+        palabras.add("UNIVERSO");
+        palabras.add("TORMENTA");
+        palabras.add("HABITACION");
+        palabras.add("VENTANA");
+
 
         //crear random
         Random rand = new Random();
-        String palabraAleatoria = palabras.get(rand.nextInt(palabras.size()));
-        String palabraInvertida = "";
+        palabraAleatoria = palabras.get(rand.nextInt(palabras.size()));
+        palabraInvertida = "";
 
         for (int x = palabraAleatoria.length() - 1; x >= 0; x--)
         {
             palabraInvertida = palabraInvertida + palabraAleatoria.charAt(x);
         }
-        
-
 
         //Caracteristicas de la ventana
         this.setTitle("Juego2");
@@ -75,7 +85,7 @@ public class Jugar2 extends JDialog implements ActionListener
         //label titulo
         lbJuego2= new JLabel("ARREGLAR LA PALABRA",JLabel.RIGHT);
         lbJuego2.setFont(new Font("Arial", Font.BOLD, 35));
-        lbJuego2.setBounds(150,50,500,40);
+        lbJuego2.setBounds(150,50,600,40);
         Color blanco =new Color(255,255,255);
         lbJuego2.setForeground(blanco);
         add(lbJuego2);
@@ -107,27 +117,46 @@ public class Jugar2 extends JDialog implements ActionListener
         Color morado =new Color(220,51,209);
         btComprobar.setBackground(morado);
         this.add(btComprobar);
+        btComprobar.addActionListener(this);
 
+        
 
+    }
 
+    
 
+    public void actionPerformed(ActionEvent e) 
+    {
+        if (e.getSource() == btComprobar) 
+        {
+            String g;
+            g= tfLetra.getText();
+            
+            if(g.equals(palabraAleatoria))
+            {
+                
+                miDialogoJ2 = new DialogoJ2();
+                this.dispose();
+                
+            }
+            
+            
         }
+    }
         
         
 
 
 
     
-    public void agregarOyentesBotones(ActionListener pAL)
-    {
-        btComprobar.addActionListener(pAL);
-    }
+    
 
     public String getPalabra()
     {
         return (String) tfLetra.getText();
     }
-
+   
+    
 
 
 
