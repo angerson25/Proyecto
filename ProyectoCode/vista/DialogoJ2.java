@@ -63,6 +63,7 @@ public class DialogoJ2 extends JDialog implements ActionListener
             
             
         }
+        
     }
     
     
