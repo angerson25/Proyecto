@@ -6,6 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
@@ -13,13 +14,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class Jugar1 extends JDialog
+public class Jugar1 extends JDialog implements ActionListener
 {
     //----------------------
     // Atributos
     //----------------------
-    private JButton btJugar1;
+    private JButton btJugar1, btComprobar;
+    private JLabel lb14;
     private JTextField tfLetra;
+    private String palabraAleatoria;
 
     //----------------------
     // Metodos
@@ -42,15 +45,16 @@ public class Jugar1 extends JDialog
         //crear juego del ahorcado
         //crear arraylist de palabras
         ArrayList<String> palabras = new ArrayList<String>();
-        palabras.add("ARBOL");
+        /*palabras.add("ARBOL");
         palabras.add("CASA");
         palabras.add("LAPICERO");
-        palabras.add("MOTO");
-        palabras.add("NAVIDAD");
+        */palabras.add("MOTO");
+        //palabras.add("NAVIDAD");
 
         //crear random
         Random rand = new Random();
-        String palabraAleatoria = palabras.get(rand.nextInt(palabras.size()));
+       
+        palabraAleatoria = palabras.get(rand.nextInt(palabras.size()));
         //contar letras de la palabra
         int cantidadLetras = palabraAleatoria.length();
 
@@ -189,7 +193,8 @@ public class Jugar1 extends JDialog
 
             // Crear los labels y agregarlos al panel
         if (palabraAleatoria.equals("MOTO")){
-            JLabel lb14 = new JLabel("M");
+            lb14 = new JLabel("M");
+            lb14.setVisible(false);
             lb14.setBounds(300, 100, 100, 100);
             this.add(lb14);
             JLabel linea14 = new JLabel("__");
@@ -277,11 +282,48 @@ public class Jugar1 extends JDialog
         tfLetra = new JTextField();
         tfLetra.setBounds(400,300,100, 25);
         this.add(tfLetra);
+
+        //Boton comprobar 
+        btComprobar = new JButton("Comprobar");
+        btComprobar.setBounds(630,290,170,40); 
+        btComprobar.setActionCommand("comprobarJ2");
+        Color morado =new Color(220,51,209);
+        btComprobar.setBackground(morado);
+        this.add(btComprobar);
+        btComprobar.addActionListener(this);
+
+
+
         
 
 
 
     }
+
+    public void actionPerformed(ActionEvent e) 
+    {
+        if (e.getSource() == btComprobar) 
+        {
+            String g;
+            g= tfLetra.getText();
+            
+            
+            if(palabraAleatoria.equals("e"))
+            if(g.equals("M")){
+                    
+                lb14.setVisible(true);
+            }
+                
+            
+            
+
+            
+            
+            
+            
+        }
+    }
+    
     public void agregarOyentesBotones(ActionListener pAL)
     {
         btJugar1.addActionListener(pAL);
