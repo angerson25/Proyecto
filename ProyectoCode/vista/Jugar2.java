@@ -27,6 +27,7 @@ public class Jugar2 extends JDialog implements ActionListener
     private JLabel lbPalabraInvertida;
     private JLabel lbArreglaPalabra;
     public DialogoJ2 miDialogoJ2 =null;
+    public DIalogoJ2Incorrecto miDialogoJ2Incorrecto;
     private String palabraInvertida;
     private String palabraAleatoria;
     //----------------------
@@ -83,9 +84,9 @@ public class Jugar2 extends JDialog implements ActionListener
         this.setVisible(true);
 
         //label titulo
-        lbJuego2= new JLabel("ARREGLAR LA PALABRA",JLabel.RIGHT);
+        lbJuego2= new JLabel("ARREGLAR LA PALABRA");
         lbJuego2.setFont(new Font("Arial", Font.BOLD, 35));
-        lbJuego2.setBounds(150,50,600,40);
+        lbJuego2.setBounds(210,50,600,40);
         Color blanco =new Color(255,255,255);
         lbJuego2.setForeground(blanco);
         add(lbJuego2);
@@ -93,7 +94,7 @@ public class Jugar2 extends JDialog implements ActionListener
         //label Palabra invertida
         lbPalabraInvertida= new JLabel("Palabra invertida : "+palabraInvertida);
         lbPalabraInvertida.setFont(new Font("Arial", Font.BOLD, 35));
-        lbPalabraInvertida.setBounds(40,190,500,40);
+        lbPalabraInvertida.setBounds(40,190,650,40);
         lbPalabraInvertida.setForeground(blanco);
         add(lbPalabraInvertida);
 
@@ -138,6 +139,11 @@ public class Jugar2 extends JDialog implements ActionListener
                 miDialogoJ2 = new DialogoJ2();
                 this.dispose();
                 
+            }
+            else
+            {
+                miDialogoJ2Incorrecto = new DIalogoJ2Incorrecto();
+                this.dispose();
             }
             
             

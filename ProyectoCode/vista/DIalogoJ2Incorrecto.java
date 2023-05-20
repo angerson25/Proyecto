@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DialogoJ2 extends JDialog implements ActionListener
+public class DIalogoJ2Incorrecto extends JDialog implements ActionListener
 {
     //atributo
    
@@ -24,7 +24,7 @@ public class DialogoJ2 extends JDialog implements ActionListener
     
     private JButton btContinuar;
     private JButton btSalir;
-    public DialogoJ2()
+    public DIalogoJ2Incorrecto()
     {
         this.setLayout(null);
 
@@ -37,7 +37,7 @@ public class DialogoJ2 extends JDialog implements ActionListener
 
       
 
-        lbxd= new JLabel("CORRECTO");
+        lbxd= new JLabel("INCORRECTO :( ");
         lbxd.setFont(new Font("Arial", Font.BOLD, 12));
         lbxd.setBounds(10,10,100,80);
         Color blanco =new Color(255,255,255);

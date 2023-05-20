@@ -48,7 +48,7 @@ public class PanelMenu extends JDialog
 
         //creacion boton jugar1
         btJugar2 = new JButton("Jugar");
-        btJugar2.setBounds(200,430,170,50); 
+        btJugar2.setBounds(250,430,170,50); 
         btJugar2.setActionCommand("jugar2");
         btJugar2.setBackground(blanco);
         this.add(btJugar2);
