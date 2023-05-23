@@ -20,8 +20,8 @@ public class PanelMenu extends JDialog
     //----------------------
     private JButton btJugar1;
     private JButton btJugar2;
-    private JLabel lbImagen;
-    private ImageIcon iImagen;
+    private JLabel lbImagen, lbAhorcado;
+    private ImageIcon iImagen, ahorcado;
     private JLabel lbActividades;
     //----------------------
     // Metodos
@@ -34,7 +34,7 @@ public class PanelMenu extends JDialog
         //creacion de los labels
         lbActividades= new JLabel("ACTIVIDADES",JLabel.RIGHT);
         lbActividades.setFont(new Font("Arial", Font.BOLD, 35));
-        lbActividades.setBounds(300,90,250,40);
+        lbActividades.setBounds(300,20,250,40);
         Color blanco =new Color(255,255,255);
         lbActividades.setForeground(blanco);
         add(lbActividades);
@@ -46,12 +46,40 @@ public class PanelMenu extends JDialog
         btJugar1.setBackground(blanco);
         this.add(btJugar1);
 
-        //creacion boton jugar1
+        //añadir imagen ahorcado
+        ahorcado = new ImageIcon(getClass().getResource("/vista/ahorcado.png"));
+        lbAhorcado = new JLabel(ahorcado);
+        lbAhorcado.setBounds(10,150,170,170);
+        add(lbAhorcado);
+
+
+
+
+        //creacion boton jugar2
         btJugar2 = new JButton("Jugar");
         btJugar2.setBounds(250,430,170,50); 
         btJugar2.setActionCommand("jugar2");
         btJugar2.setBackground(blanco);
         this.add(btJugar2);
+
+        //creacion boton jugar3
+        JButton btJugar3 = new JButton("Jugar");
+        btJugar3.setBounds(450,430,170,50);
+        btJugar3.setActionCommand("jugar3");
+        btJugar3.setBackground(blanco);
+        this.add(btJugar3);
+
+        //creacion boton jugar4
+        JButton btJugar4 = new JButton("Jugar");
+        btJugar4.setBounds(650,430,170,50);btJugar4.setActionCommand("jugar4");
+        btJugar4.setBackground(blanco);
+        this.add(btJugar4);
+
+
+
+
+
+
 
         //creacion y adicion de la imagen
         iImagen = new ImageIcon(getClass().getResource("/vista/panelMenu.png"));

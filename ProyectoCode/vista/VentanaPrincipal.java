@@ -8,7 +8,7 @@ public class VentanaPrincipal extends JFrame
     //----------------------
     //Atributos
     //----------------------
-    public PanelEntradaDatos miPanelEntradaDatos;
+
     public PanelEntrada miPanelEntrada;
     public PanelMenu miPanelMenu = null;
     public Jugar1 miJugar1 = null;
