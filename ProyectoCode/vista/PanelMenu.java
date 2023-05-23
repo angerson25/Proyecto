@@ -19,7 +19,7 @@ public class PanelMenu extends JDialog
     // Atributos
     //----------------------
     private JButton btJugar1;
-    private JButton btJugar2;
+    private JButton btJugar2,btJugar3;
     private JLabel lbImagen, lbAhorcado;
     private ImageIcon iImagen, ahorcado;
     private JLabel lbActividades;
@@ -63,7 +63,7 @@ public class PanelMenu extends JDialog
         this.add(btJugar2);
 
         //creacion boton jugar3
-        JButton btJugar3 = new JButton("Jugar");
+        btJugar3 = new JButton("Jugar");
         btJugar3.setBounds(450,430,170,50);
         btJugar3.setActionCommand("jugar3");
         btJugar3.setBackground(blanco);
@@ -104,6 +104,7 @@ public class PanelMenu extends JDialog
     {
         btJugar1.addActionListener(pAL);
         btJugar2.addActionListener(pAL);
+        btJugar3.addActionListener(pAL);
     }
 
     

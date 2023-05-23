@@ -59,7 +59,11 @@ public class Controlador implements ActionListener
             venPrin.crearJugar2();
             
             
-        }        
+        }      
+        if(comando.equals("jugar3"))  
+        {
+            venPrin.crearJugar3();
+        }
         //abrir el dialogo J2
         
        
