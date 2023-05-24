@@ -51,7 +51,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
         
         Random random = new Random();
-        int v = random.nextInt(3);
+        int v = random.nextInt(4);
         
         int x = random.nextInt(10);
         int y = random.nextInt(10);
@@ -126,6 +126,30 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText(":)");
+    }
+    if(v==3)
+    {
+        for(int k=0,u=90;k<10;k++)
+        {
+            
+            for(int h=0,l=40;h<10;h++)
+            {
+            JButton btñ = new JButton("h");
+            btñ.setBounds(l,u,50,40); 
+            btñ.setFont(new Font("Arial", Font.BOLD, 12));
+            matriz[k][h]=btñ;
+            add(matriz[k][h]);
+
+            l=l+51;
+            
+            }
+            u=u+41;
+        }
+        
+        
+        
+
+        matriz[x][y].setText("n");
     }
     btComprobar =matriz[x][y];
     btComprobar.addActionListener(this);
