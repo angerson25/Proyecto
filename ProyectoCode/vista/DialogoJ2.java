@@ -35,17 +35,16 @@ public class DialogoJ2 extends JDialog implements ActionListener
         this.setResizable(false);
         this.setVisible(true);
 
-      
-
         lbxd= new JLabel("CORRECTO");
-        lbxd.setFont(new Font("Arial", Font.BOLD, 12));
-        lbxd.setBounds(10,10,100,80);
-        Color blanco =new Color(255,255,255);
-        lbxd.setForeground(blanco);
+        lbxd.setHorizontalAlignment(JLabel.CENTER);
+        lbxd.setFont(new Font("Arial", Font.BOLD, 20));
+        lbxd.setBounds(75,10,200,80);
+        Color negro =new Color(0,0,0);
+        lbxd.setForeground(negro);
         add(lbxd);
         
-        btContinuar = new JButton("continuar");
-        btContinuar.setBounds(75,80,200,40);
+        btContinuar = new JButton("DE NUEVO");
+        btContinuar.setBounds(75,120,200,25);
         btContinuar.setActionCommand("continuarJ2");
         btContinuar.setFont(new Font("Arial", Font.BOLD, 20));;
         Color morado =new Color(220,51,209);
@@ -53,13 +52,14 @@ public class DialogoJ2 extends JDialog implements ActionListener
         this.add(btContinuar);        
         btContinuar.addActionListener(this);
 
-        btSalir = new JButton("Salir");
-        btSalir.setBounds(75,140,200,40);
+        btSalir = new JButton("MENU");
+        btSalir.setBounds(75,180,200,25);
         btSalir.setActionCommand("SalirJ2");
         btSalir.setFont(new Font("Arial", Font.BOLD, 20));;
         btSalir.setBackground(morado);
         this.add(btSalir);        
         btSalir.addActionListener(this);
+
 
 
         
