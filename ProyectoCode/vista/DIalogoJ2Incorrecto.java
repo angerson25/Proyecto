@@ -3,17 +3,11 @@ package vista;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
-import vista.VentanaPrincipal;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Random;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class DIalogoJ2Incorrecto extends JDialog implements ActionListener
 {

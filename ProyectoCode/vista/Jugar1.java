@@ -11,8 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 
 public class Jugar1 extends JDialog implements ActionListener
@@ -21,7 +19,7 @@ public class Jugar1 extends JDialog implements ActionListener
     // Atributos
     //----------------------
     private JButton btJugar1, btComprobar;
-    private JLabel lb14, lbErrores;
+    private JLabel lbErrores;
     private int contadorErrores;
     private JTextField tfLetra;
     private String palabraAleatoria;

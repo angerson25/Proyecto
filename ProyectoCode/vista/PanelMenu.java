@@ -3,14 +3,9 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 import java.awt.event.ActionListener;
-import java.lang.ProcessBuilder.Redirect;
-
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import java.awt.Font;
-import java.awt.Transparency;
 
 
 public class PanelMenu extends JDialog

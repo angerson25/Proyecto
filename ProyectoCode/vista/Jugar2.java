@@ -4,16 +4,13 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import java.awt.event.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import java.awt.Font;
-import vista.VentanaPrincipal;
+import javax.swing.ImageIcon;
 
 public class Jugar2 extends JDialog implements ActionListener 
 {
@@ -21,7 +18,8 @@ public class Jugar2 extends JDialog implements ActionListener
     //----------------------
     // Atributos
     //----------------------
-    private JLabel lbJuego2;
+    private JLabel lbJuego2, lbImagen;
+    private ImageIcon iImagen;
     private JButton btComprobar;
     private JTextField tfLetra;
     private JLabel lbPalabraInvertida;
@@ -119,6 +117,13 @@ public class Jugar2 extends JDialog implements ActionListener
         btComprobar.setBackground(morado);
         this.add(btComprobar);
         btComprobar.addActionListener(this);
+
+        //creacion y adicion de la imagen
+        iImagen = new ImageIcon(getClass().getResource("/vista/panelMenu.png"));
+        lbImagen= new JLabel(iImagen);
+        lbImagen.setBounds(0,0,900,506);
+        add(lbImagen);
+
 
         
 

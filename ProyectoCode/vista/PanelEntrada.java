@@ -3,15 +3,11 @@ package vista;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.border.TitledBorder;
-import javax.swing.plaf.basic.BasicHTML;
+
 
 public class PanelEntrada extends JPanel
 {
