@@ -186,7 +186,7 @@ public class Jugar3 extends JDialog implements ActionListener
 
        
     //creacion y adicion de la imagen
-    iImagen = new ImageIcon(getClass().getResource("/vista/Juego3.png"));
+    iImagen = new ImageIcon(getClass().getResource("/vista/Juego.png"));
     lbImagen= new JLabel(iImagen);
     lbImagen.setBounds(0,0,900,506);
     add(lbImagen);
