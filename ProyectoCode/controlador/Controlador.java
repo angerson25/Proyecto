@@ -3,7 +3,7 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import modelo.Disle;
+import modelo.Juego;
 import vista.VentanaPrincipal;
 import vista.PanelMenu;
 
@@ -13,7 +13,7 @@ public class Controlador implements ActionListener
     //Atributos
     //----------------------------
     private VentanaPrincipal venPrin;
-    private Disle model;
+    private Juego model;
     private Object miPanelEntrada;
     
     
@@ -22,7 +22,7 @@ public class Controlador implements ActionListener
     //----------------------------
     
     //Constructor
-    public Controlador(VentanaPrincipal pVenPrin, Disle pModel)
+    public Controlador(VentanaPrincipal pVenPrin, Juego pModel)
     {
         this.venPrin = pVenPrin;
         this.model = pModel;

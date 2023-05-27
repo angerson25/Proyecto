@@ -1,7 +1,7 @@
 package ejecutable;
 
 import controlador.Controlador;
-import modelo.Disle;
+import modelo.Juego;
 import vista.VentanaPrincipal;
 
 public class CreaccionDisle 
@@ -9,7 +9,7 @@ public class CreaccionDisle
     public static void main(String[] args)
     {
         VentanaPrincipal miVentana = new VentanaPrincipal();
-        Disle miDisle= null;
+        Juego miDisle= null;
         Controlador miControlador = new Controlador(miVentana, miDisle);
     }
 }

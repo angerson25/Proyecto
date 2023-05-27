@@ -4,13 +4,15 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
+import modelo.Juego;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 public class Jugar1 extends JDialog implements ActionListener
@@ -19,7 +21,7 @@ public class Jugar1 extends JDialog implements ActionListener
     // Atributos
     //----------------------
     private JButton btJugar1, btComprobar;
-    private JLabel lbErrores;
+    private JLabel lb14, lbErrores;
     private int contadorErrores;
     private JTextField tfLetra;
     private String palabraAleatoria;
@@ -40,37 +42,9 @@ public class Jugar1 extends JDialog implements ActionListener
         this.setResizable(false);
         this.setVisible(true);
         
-        //crear arraylist de palabras
-        ArrayList<String> palabras = new ArrayList<String>();
-
-        palabras.add("ARBOL");
-        palabras.add("CASA");
-        palabras.add("LAPICERO");
-        palabras.add("MOTO");
-        palabras.add("NAVIDAD");
-        palabras.add("BIGOTE");
-        palabras.add("MUÑECA");
-        palabras.add("CEREBRO");
-        palabras.add("ABDOMEN");
-        palabras.add("ESPALDA");
-        palabras.add("DIARREA");
-        palabras.add("REPRODUCCION");
-        palabras.add("ELEFANTE");
-        palabras.add("CARACOL");
-        palabras.add("VEGETAL");
-        palabras.add("PATATA");
-        palabras.add("MANZANA");
-        palabras.add("GASEOSA");
-        palabras.add("CALENDARIO");
-        palabras.add("ANOCHECER");
-        palabras.add("UNIVERSO");
-        palabras.add("TORMENTA");
-        palabras.add("HABITACION");
-        palabras.add("VENTANA");
-
-        //crear random
-        Random rand = new Random();
-        palabraAleatoria = palabras.get(rand.nextInt(palabras.size()));
+        //palabra aleatoria
+        Juego j1 = new Juego();
+        palabraAleatoria = j1.getPalabraAleatoria();
 
         // crear el panel de texto
         tfLetra = new JTextField("");
