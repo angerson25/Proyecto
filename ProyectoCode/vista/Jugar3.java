@@ -22,7 +22,7 @@ public class Jugar3 extends JDialog implements ActionListener
     public DialogoJ3 miDialogoJ3 =null;
     private JButton matriz[][] = new JButton[10][10];
     private ImageIcon iImagen;
-    private JLabel lbImagen;
+    private JLabel lbImagen, lbPista;
     ArrayList<JLabel> cajas = new ArrayList<JLabel>();
     
     //----------------------
@@ -39,6 +39,14 @@ public class Jugar3 extends JDialog implements ActionListener
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
+
+        //creacion y adicion de label pista
+        lbPista= new JLabel("PISTA » ");
+        lbPista.setFont(new Font("Arial", Font.BOLD, 20));
+        Color blanco =new Color(255,255,255);
+        lbPista.setForeground(blanco);
+        lbPista.setBounds(620,160,600,40);
+        add(lbPista);
         
         //crear matriz
         
@@ -48,6 +56,8 @@ public class Jugar3 extends JDialog implements ActionListener
         
         int x = random.nextInt(10);
         int y = random.nextInt(10);
+
+        
 
         //mostrar la matriz
     if(v==0)
@@ -72,6 +82,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText("n");
+        lbPista.setText("PISTA » n");
     }
     if(v==1)
     {
@@ -95,6 +106,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
         
         matriz[x][y].setText("U");
+        lbPista.setText("PISTA » U");
     }
     if(v==2)
     {
@@ -119,6 +131,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText(":)");
+        lbPista.setText("PISTA » :)");
     }
     if(v==3)
     {
@@ -143,6 +156,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText("n");
+        lbPista.setText("PISTA » n");
     }
 
     if(v==4)
@@ -168,6 +182,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText("p");
+        lbPista.setText("PISTA » p");
 
 
     }
@@ -176,17 +191,18 @@ public class Jugar3 extends JDialog implements ActionListener
     
     //creacion y adicion de label titulo
     JLabel lbJuego3= new JLabel("ENCUENTRA EL CARACTER DIFERENTE");
-    lbJuego3.setFont(new Font("Arial", Font.BOLD, 25));
-    Color blanco =new Color(255,255,255);
-    lbJuego3.setForeground(blanco);
-    lbJuego3.setBounds(30,30,600,40);
+    lbJuego3.setFont(new Font("Arial", Font.BOLD, 22));
+    lbJuego3.setBounds(40,28,600,40);
     add(lbJuego3);
+
+
+
 
         
 
        
     //creacion y adicion de la imagen
-    iImagen = new ImageIcon(getClass().getResource("/vista/Juego.png"));
+    iImagen = new ImageIcon(getClass().getResource("/vista/Juego3.png"));
     lbImagen= new JLabel(iImagen);
     lbImagen.setBounds(0,0,900,506);
     add(lbImagen);

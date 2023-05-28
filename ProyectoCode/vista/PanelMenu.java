@@ -14,7 +14,7 @@ public class PanelMenu extends JDialog
     // Atributos
     //----------------------
     private JButton btJugar1;
-    private JButton btJugar2,btJugar3;
+    private JButton btJugar2,btJugar3, btJugar4;
     private JLabel lbImagen, lbAhorcado;
     private ImageIcon iImagen, ahorcado;
     private JLabel lbActividades;
@@ -27,15 +27,16 @@ public class PanelMenu extends JDialog
         this.setLayout(null);
 
         //creacion de los labels
-        lbActividades= new JLabel("ACTIVIDADES",JLabel.RIGHT);
-        lbActividades.setFont(new Font("Arial", Font.BOLD, 35));
-        lbActividades.setBounds(300,20,250,40);
+        lbActividades= new JLabel("ACTIVIDADES",JLabel.CENTER);
+        lbActividades.setFont(new Font("Gill Sans MT", Font.BOLD, 35));
+        lbActividades.setBounds(300,20,300,40);
         Color blanco =new Color(255,255,255);
         lbActividades.setForeground(blanco);
         add(lbActividades);
 
         //creacion boton jugar1
-        btJugar1 = new JButton("Jugar");
+        btJugar1 = new JButton("JUGAR");
+        btJugar1.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
         btJugar1.setBounds(50,430,170,50); 
         btJugar1.setActionCommand("jugar1");
         btJugar1.setBackground(blanco);
@@ -51,21 +52,24 @@ public class PanelMenu extends JDialog
 
 
         //creacion boton jugar2
-        btJugar2 = new JButton("Jugar");
+        btJugar2 = new JButton("JUGAR");
+        btJugar2.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
         btJugar2.setBounds(250,430,170,50); 
         btJugar2.setActionCommand("jugar2");
         btJugar2.setBackground(blanco);
         this.add(btJugar2);
 
         //creacion boton jugar3
-        btJugar3 = new JButton("Jugar");
+        btJugar3 = new JButton("JUGAR");
+        btJugar3.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
         btJugar3.setBounds(450,430,170,50);
         btJugar3.setActionCommand("jugar3");
         btJugar3.setBackground(blanco);
         this.add(btJugar3);
 
         //creacion boton jugar4
-        JButton btJugar4 = new JButton("Jugar");
+        btJugar4 = new JButton("JUGAR");
+        btJugar4.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
         btJugar4.setBounds(650,430,170,50);btJugar4.setActionCommand("jugar4");
         btJugar4.setBackground(blanco);
         this.add(btJugar4);

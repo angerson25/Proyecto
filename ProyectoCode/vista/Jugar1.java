@@ -1,11 +1,14 @@
 package vista;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.Juego;
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,7 +24,9 @@ public class Jugar1 extends JDialog implements ActionListener
     // Atributos
     //----------------------
     private JButton btJugar1, btComprobar;
-    private JLabel lb14, lbErrores;
+    private JLabel lbErrores;
+    private JLabel lbImagen, lbInstrucciones, lbJuego1;
+    private ImageIcon iImagen;
     private int contadorErrores;
     private JTextField tfLetra;
     private String palabraAleatoria;
@@ -46,26 +51,46 @@ public class Jugar1 extends JDialog implements ActionListener
         Juego j1 = new Juego();
         palabraAleatoria = j1.getPalabraAleatoria();
 
+        //LABEL INSTRUCCIONES
+        lbInstrucciones = new JLabel("INGRESE UNA LETRA", JLabel.CENTER);
+        lbInstrucciones.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
+        lbInstrucciones.setBounds(250, 219, 400, 40);
+        this.add(lbInstrucciones);
+
+        JLabel lbv = new JLabel("vvv", JLabel.CENTER);
+        lbv.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
+        lbv.setBounds(400, 212, 100, 100);
+        this.add(lbv);
+
+
+
         // crear el panel de texto
-        tfLetra = new JTextField("");
-        tfLetra.setFont(new Font("Arial", Font.BOLD, 20));
-        tfLetra.setBounds(380, 290, 200, 40);
+        tfLetra = new JTextField("", JLabel.CENTER);
+        tfLetra.setFont(new Font("Gill Sans MT", Font.BOLD, 15));
+        tfLetra.setBounds(400, 290, 100, 30);
         add(tfLetra);
         
         //Boton comprobar 
-        btComprobar = new JButton("Comprobar");
-        btComprobar.setBounds(630,290,170,40); 
+        btComprobar = new JButton("COMPROBAR");
+        btComprobar.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
+        btComprobar.setBounds(365,350,170,40); 
         btComprobar.setActionCommand("comprobarJ2");
         Color morado =new Color(220,51,209);
         btComprobar.setBackground(morado);
         this.add(btComprobar);
         btComprobar.addActionListener(this);
 
+        //label titulo
+        lbJuego1= new JLabel("ADIVINA LA PALABRA");
+        lbJuego1.setFont(new Font("Gill Sans MT", Font.BOLD, 20));
+        lbJuego1.setBounds(90,10,400,100);
+        this.add(lbJuego1);
+
         //label con contador de errores
-        //crear contador de errores
         contadorErrores = 0;
-        lbErrores = new JLabel("Errores: ");
-        lbErrores.setBounds(10, 10, 100, 100);
+        lbErrores = new JLabel("ERRORES: ");
+        lbErrores.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
+        lbErrores.setBounds(40, 110, 150, 100);
         this.add(lbErrores);
 
 
@@ -73,6 +98,7 @@ public class Jugar1 extends JDialog implements ActionListener
         for(int k=0;k<palabraAleatoria.length();k++)
         {
         JLabel j= new JLabel(Character.toString( palabraAleatoria.charAt(k)));
+        j.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
         j.setBounds(p, 90, 40, 40);
         j.setVisible(false);
         cajas.add(j);
@@ -90,12 +116,21 @@ public class Jugar1 extends JDialog implements ActionListener
         add(j);
             
         }
+
+        //creacion y adicion de la imagen
+        iImagen = new ImageIcon(getClass().getResource("/vista/Juego1.png"));
+        lbImagen= new JLabel(iImagen);
+        lbImagen.setBounds(0,0,900,506);
+        add(lbImagen);
     }
 
     public void actionPerformed(ActionEvent e) 
     {
         if (e.getSource() == btComprobar) 
         {
+            
+
+
             for (int i = 0; i < palabraAleatoria.length(); i++)
             {
                 if(tfLetra.getText().equals(cajas.get(i).getText()))
@@ -126,7 +161,7 @@ public class Jugar1 extends JDialog implements ActionListener
             if(palabraAleatoria.contains(tfLetra.getText())==false)
             {
                 contadorErrores++;
-                lbErrores.setText("Errores: "+contadorErrores);
+                lbErrores.setText("ERRORES: "+contadorErrores);
             }
             tfLetra.setText("");
 

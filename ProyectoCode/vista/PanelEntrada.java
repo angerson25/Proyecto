@@ -35,7 +35,8 @@ public class PanelEntrada extends JPanel
 
         
         //Boton Entrar 
-        btEntrar = new JButton("Entrar");
+        btEntrar = new JButton("ENTRAR");
+        btEntrar.setFont(new Font("Gill Sans MT", Font.BOLD, 15));
         btEntrar.setBounds(50,430,170,50); 
         btEntrar.setActionCommand("entrar");
         Color morado =new Color(220,51,209);
@@ -45,7 +46,7 @@ public class PanelEntrada extends JPanel
 
         //crear label
         lbAyuda= new JLabel("A Y U D A    P A R A");
-        lbAyuda.setFont(new Font("Arial", Font.BOLD, 40));
+        lbAyuda.setFont(new Font("Gill Sans MT", Font.BOLD, 40));
         lbAyuda.setBounds(60,150,470,50);
         Color blanco =new Color(255,255,255);
         lbAyuda.setForeground(blanco);
@@ -53,14 +54,14 @@ public class PanelEntrada extends JPanel
 
         //crear label
         lbAyuda2= new JLabel("P E R S O N A S   C O N");
-        lbAyuda2.setFont(new Font("Arial", Font.BOLD, 40));
+        lbAyuda2.setFont(new Font("Gill Sans MT", Font.BOLD, 40));
         lbAyuda2.setBounds(54,190,470,50);
         lbAyuda2.setForeground(blanco);
         add(lbAyuda2);
 
         //crear label
         lbAyuda3= new JLabel("DISLEXIA");
-        lbAyuda3.setFont(new Font("Arial", Font.BOLD, 100));
+        lbAyuda3.setFont(new Font("Gill Sans MT", Font.BOLD, 100));
         lbAyuda3.setBounds(44,170,770,250);
         lbAyuda3.setForeground(blanco);
         add(lbAyuda3);

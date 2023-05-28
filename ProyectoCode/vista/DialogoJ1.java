@@ -36,7 +36,7 @@ public class DialogoJ1 extends JDialog implements ActionListener
         btContinuar = new JButton("DE NUEVO");
         btContinuar.setBounds(75,190,200,25);
         btContinuar.setActionCommand("continuarJ2");
-        btContinuar.setFont(new Font("Arial", Font.BOLD, 20));;
+        btContinuar.setFont(new Font("Gill Sans MT", Font.BOLD, 20));;
         Color morado =new Color(220,51,209);
         btContinuar.setBackground(morado);
         this.add(btContinuar);        
@@ -45,7 +45,7 @@ public class DialogoJ1 extends JDialog implements ActionListener
         btSalir = new JButton("MENU");
         btSalir.setBounds(75,220,200,25);
         btSalir.setActionCommand("SalirJ2");
-        btSalir.setFont(new Font("Arial", Font.BOLD, 20));;
+        btSalir.setFont(new Font("Gill Sans MT", Font.BOLD, 20));;
         btSalir.setBackground(morado);
         this.add(btSalir);        
         btSalir.addActionListener(this);
