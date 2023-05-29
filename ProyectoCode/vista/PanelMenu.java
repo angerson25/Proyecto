@@ -15,8 +15,8 @@ public class PanelMenu extends JDialog
     //----------------------
     private JButton btJugar1;
     private JButton btJugar2,btJugar3, btJugar4;
-    private JLabel lbImagen, lbAhorcado;
-    private ImageIcon iImagen, ahorcado;
+    private JLabel lbImagen, lbAhorcado, lbArreglar, lbCaracteres;
+    private ImageIcon iImagen, ahorcado, iArreglar, iCaracteres;
     private JLabel lbActividades;
     //----------------------
     // Metodos
@@ -45,7 +45,7 @@ public class PanelMenu extends JDialog
         //añadir imagen ahorcado
         ahorcado = new ImageIcon(getClass().getResource("/vista/ahorcado.png"));
         lbAhorcado = new JLabel(ahorcado);
-        lbAhorcado.setBounds(10,150,170,170);
+        lbAhorcado.setBounds(50,150,170,170);
         add(lbAhorcado);
 
 
@@ -59,6 +59,12 @@ public class PanelMenu extends JDialog
         btJugar2.setBackground(blanco);
         this.add(btJugar2);
 
+        //añadir imagen segundo juego
+        iArreglar = new ImageIcon(getClass().getResource("/vista/arreglar.png"));
+        lbArreglar = new JLabel(iArreglar);
+        lbArreglar.setBounds(250,150,170,170);
+        add(lbArreglar);
+
         //creacion boton jugar3
         btJugar3 = new JButton("JUGAR");
         btJugar3.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
@@ -66,6 +72,12 @@ public class PanelMenu extends JDialog
         btJugar3.setActionCommand("jugar3");
         btJugar3.setBackground(blanco);
         this.add(btJugar3);
+
+        //añadir imagen caracteres
+        iCaracteres = new ImageIcon(getClass().getResource("/vista/caracteres.png"));
+        lbCaracteres = new JLabel(iCaracteres);
+        lbCaracteres.setBounds(450,150,170,170);
+        add(lbCaracteres);
 
         //creacion boton jugar4
         btJugar4 = new JButton("JUGAR");

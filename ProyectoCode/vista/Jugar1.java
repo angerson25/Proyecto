@@ -90,7 +90,7 @@ public class Jugar1 extends JDialog implements ActionListener
         contadorErrores = 0;
         lbErrores = new JLabel("ERRORES: ");
         lbErrores.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
-        lbErrores.setBounds(40, 110, 150, 100);
+        lbErrores.setBounds(600, 10, 150, 100);
         this.add(lbErrores);
 
 

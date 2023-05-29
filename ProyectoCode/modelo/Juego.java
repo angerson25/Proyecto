@@ -26,7 +26,11 @@ public class Juego
         palabras.add("CEREBRO");
         palabras.add("ABDOMEN");
         palabras.add("ESPALDA");
-        palabras.add("DIARREA");
+        palabras.add("AZUL");
+        palabras.add("ROJO");
+        palabras.add("VERDE");
+        palabras.add("AMARILLO");
+        palabras.add("NARANJA");
         palabras.add("REPRODUCCION");
         palabras.add("ELEFANTE");
         palabras.add("CARACOL");
