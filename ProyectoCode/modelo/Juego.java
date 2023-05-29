@@ -6,8 +6,8 @@ public class Juego
 {
     //atributos
     ArrayList<String> palabras = new ArrayList<String>();
-    private String palabraAleatoria;
-    
+    private String palabraAleatoria,imagenAleatoria;
+    ArrayList<String> imagen = new ArrayList<String>();
     public Juego()
     {
 
