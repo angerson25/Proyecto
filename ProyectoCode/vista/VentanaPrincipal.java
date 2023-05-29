@@ -12,6 +12,7 @@ public class VentanaPrincipal extends JFrame
     public Jugar1 miJugar1 = null;
     public Jugar2 miJugar2 =null;
     public Jugar3 miJugar3 =null;
+    public Jugar4 miJugar4 =null;
     public DialogoJ2 miDialogoJ2 =null;
 
     //-------------------------
@@ -48,6 +49,8 @@ public class VentanaPrincipal extends JFrame
     {
         miPanelMenu = new PanelMenu();
     }
+
+    //Crear jugar3
     public void crearJugar3()
     {
         miJugar3 =new Jugar3();
@@ -64,9 +67,17 @@ public class VentanaPrincipal extends JFrame
     {
         miJugar2 = new Jugar2();
     }
+
+    //Crear dialogoJ2
     public void crearDJ2()
     {
         miDialogoJ2 = new DialogoJ2();
+    }
+
+    //Crear dialogoJ4
+    public void crearJugar4()
+    {
+        miJugar4 = new Jugar4();
     }
     
 }

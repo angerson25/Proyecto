@@ -82,7 +82,8 @@ public class PanelMenu extends JDialog
         //creacion boton jugar4
         btJugar4 = new JButton("JUGAR");
         btJugar4.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
-        btJugar4.setBounds(650,430,170,50);btJugar4.setActionCommand("jugar4");
+        btJugar4.setBounds(650,430,170,50);
+        btJugar4.setActionCommand("jugar4");
         btJugar4.setBackground(blanco);
         this.add(btJugar4);
 
@@ -116,6 +117,7 @@ public class PanelMenu extends JDialog
         btJugar1.addActionListener(pAL);
         btJugar2.addActionListener(pAL);
         btJugar3.addActionListener(pAL);
+        btJugar4.addActionListener(pAL);
     }
 
     
