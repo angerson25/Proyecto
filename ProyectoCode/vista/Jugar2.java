@@ -38,16 +38,17 @@ public class Jugar2 extends JDialog implements ActionListener
     
     public Jugar2()
     {
+        
         //Definición del layout del Dialogo
         this.setLayout(null);
         //array list
-        Juego j2 = new Juego();
+        Juego j2 = new Juego("invertirPalabra");
         palabraAleatoria = j2.getPalabraAleatoria();
         palabraInvertida = j2.invertirPalabra();
 
         //Caracteristicas de la ventana
-        this.setTitle("Juego2");
-        this.setSize(900,556);
+        this.setTitle(j2.getNombre());
+        this.setSize(j2.getWidth(),j2.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
@@ -99,7 +100,7 @@ public class Jugar2 extends JDialog implements ActionListener
 
 
         //creacion y adicion de la imagen
-        iImagen = new ImageIcon(getClass().getResource("/vista/Juego2.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/Juego2.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);

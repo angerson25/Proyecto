@@ -67,7 +67,7 @@ public class PanelEntrada extends JPanel
         add(lbAyuda3);
 
         //creacion y adicion de la imagen de fondo
-        iImagen = new ImageIcon(getClass().getResource("/vista/PantallaPrincipal.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/PantallaPrincipal.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);

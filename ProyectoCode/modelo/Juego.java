@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 public class Juego 
 {
@@ -8,8 +9,14 @@ public class Juego
     ArrayList<String> palabras = new ArrayList<String>();
     private String palabraAleatoria,imagenAleatoria;
     ArrayList<String> imagen = new ArrayList<String>();
-    public Juego()
+
+    private String nombre,caracter,caracterDiferente;
+    private final static int whidt=900;
+    private final static int height=556;
+    private int R;
+    public Juego(String nombre)
     {
+        this.nombre =nombre;
 
     }
 
@@ -50,6 +57,21 @@ public class Juego
         return palabraAleatoria;
 
     }
+    public String getImagenAleatoria()
+    {
+        palabraAleatoria="";
+        imagen.add("CARRO");
+        imagen.add("LAPIZ");
+        imagen.add("FRUTA");
+        imagen.add("BOTELLA");
+        imagen.add("MOTO");
+        
+
+        Random rand = new Random();
+        palabraAleatoria = imagen.get(rand.nextInt(imagen.size()));
+        return palabraAleatoria;
+
+    }
     public String invertirPalabra()
     {
         String palabraInvertida = "";
@@ -59,5 +81,43 @@ public class Juego
         }
         return palabraInvertida;
     }
-    
+    public String getNombre()
+    {
+        return nombre;
+    }
+    public int getWidth()
+    {
+        return whidt;
+    }
+
+    public  int getHeight() 
+    {
+        return height;
+    }
+
+    public void reordenarMatriz()
+    {
+        Collections.shuffle(imagen);
+    }
+    public String getPalabraRandom(int k)
+    {
+        return imagen.get(k);
+    }
+
+    public String getCaracterRandom()
+    {
+        String [] caracteres = {"h","V",":("};
+        Random rand = new Random();
+        R = rand.nextInt(caracteres.length); 
+        caracter = caracteres[R];
+        return caracter;
+
+    }
+    public String getCaracterDiferente()
+    {
+        String [] caracteres = {"n","U",":)"};
+        caracterDiferente = caracteres[R];
+        return caracterDiferente;
+
+    }
 }

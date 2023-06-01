@@ -39,16 +39,17 @@ public class Jugar1 extends JDialog implements ActionListener
     {
         //Definición del layout del Dialogo
         this.setLayout(null);
+        Juego j1 = new Juego("ahorcado");
 
         //Caracteristicas de la ventana
-        this.setTitle("Juego1");
-        this.setSize(900,556);
+        this.setTitle(j1.getNombre());
+        this.setSize(j1.getWidth(),j1.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
         
         //palabra aleatoria
-        Juego j1 = new Juego();
+        
         palabraAleatoria = j1.getPalabraAleatoria();
 
         //LABEL INSTRUCCIONES
@@ -118,7 +119,7 @@ public class Jugar1 extends JDialog implements ActionListener
         }
 
         //creacion y adicion de la imagen
-        iImagen = new ImageIcon(getClass().getResource("/vista/Juego1.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/Juego1.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
@@ -129,8 +130,11 @@ public class Jugar1 extends JDialog implements ActionListener
         if (e.getSource() == btComprobar) 
         {
             
-
-
+            if(tfLetra.getText().length()!=1)
+            {
+                JOptionPane.showMessageDialog(null,"Digita una letra, por favor");
+            }
+                
             for (int i = 0; i < palabraAleatoria.length(); i++)
             {
                 if(tfLetra.getText().equals(cajas.get(i).getText()))
@@ -155,7 +159,8 @@ public class Jugar1 extends JDialog implements ActionListener
                     dialogoJ1.setVisible(true);
                     this.dispose();
                 }
-            }	
+            }
+            
 
             //SI LA LETRA NO ESTA EN LA PALABRA
             if(palabraAleatoria.contains(tfLetra.getText())==false)

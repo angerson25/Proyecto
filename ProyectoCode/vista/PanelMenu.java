@@ -43,7 +43,7 @@ public class PanelMenu extends JDialog
         this.add(btJugar1);
 
         //añadir imagen ahorcado
-        ahorcado = new ImageIcon(getClass().getResource("/vista/ahorcado.png"));
+        ahorcado = new ImageIcon(getClass().getResource("/vista/img/ahorcado.png"));
         lbAhorcado = new JLabel(ahorcado);
         lbAhorcado.setBounds(50,150,170,170);
         add(lbAhorcado);
@@ -60,7 +60,7 @@ public class PanelMenu extends JDialog
         this.add(btJugar2);
 
         //añadir imagen segundo juego
-        iArreglar = new ImageIcon(getClass().getResource("/vista/arreglar.png"));
+        iArreglar = new ImageIcon(getClass().getResource("/vista/img/arreglar.png"));
         lbArreglar = new JLabel(iArreglar);
         lbArreglar.setBounds(250,150,170,170);
         add(lbArreglar);
@@ -74,7 +74,7 @@ public class PanelMenu extends JDialog
         this.add(btJugar3);
 
         //añadir imagen caracteres
-        iCaracteres = new ImageIcon(getClass().getResource("/vista/caracteres.png"));
+        iCaracteres = new ImageIcon(getClass().getResource("/vista/img/caracteres.png"));
         lbCaracteres = new JLabel(iCaracteres);
         lbCaracteres.setBounds(450,150,170,170);
         add(lbCaracteres);
@@ -94,7 +94,7 @@ public class PanelMenu extends JDialog
 
 
         //creacion y adicion de la imagen
-        iImagen = new ImageIcon(getClass().getResource("/vista/panelMenu.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/panelMenu.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);

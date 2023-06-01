@@ -3,6 +3,9 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import modelo.Juego;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -24,6 +27,8 @@ public class Jugar3 extends JDialog implements ActionListener
     private ImageIcon iImagen;
     private JLabel lbImagen, lbPista;
     ArrayList<JLabel> cajas = new ArrayList<JLabel>();
+    private int x,y;
+    private String caracter,caracterDiferente;
     
     //----------------------
     // Metodos
@@ -31,11 +36,10 @@ public class Jugar3 extends JDialog implements ActionListener
     public Jugar3()
     {
         //Definición del layout del Dialogo
+        Juego j3 = new Juego("Encontrar el caracter difetente");
         this.setLayout(null);
-
-        //Caracteristicas de la ventana
-        this.setTitle("Juego3");
-        this.setSize(900,556);
+        this.setTitle(j3.getNombre());
+        this.setSize(j3.getWidth(),j3.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
@@ -52,25 +56,28 @@ public class Jugar3 extends JDialog implements ActionListener
         
         
         Random random = new Random();
-        int v = random.nextInt(5);
+        //int v = random.nextInt(5);
         
-        int x = random.nextInt(10);
-        int y = random.nextInt(10);
+        x = random.nextInt(10);
+        y = random.nextInt(10);
 
         
 
         //mostrar la matriz
-    if(v==0)
+    //if(v==0)
     {
+        caracter = j3.getCaracterRandom();
+        caracterDiferente = j3.getCaracterDiferente();
         for(int k=0,u=90;k<10;k++)
         {
             
             for(int h=0,l=40;h<10;h++)
             {
-            btñ = new JButton("m");
+            btñ = new JButton(caracter);
             btñ.setBounds(l,u,50,40); 
             btñ.setFont(new Font("Arial", Font.BOLD, 12));
             matriz[k][h]=btñ;
+            matriz[k][h].addActionListener(this);
             add(matriz[k][h]);
 
             l=l+51;
@@ -81,10 +88,10 @@ public class Jugar3 extends JDialog implements ActionListener
         
         
 
-        matriz[x][y].setText("n");
+        matriz[x][y].setText(caracterDiferente);
         lbPista.setText("PISTA » n");
     }
-    if(v==1)
+    /*if(v==1)
     {
         for(int k=0,u=90;k<10;k++)
         {
@@ -95,6 +102,7 @@ public class Jugar3 extends JDialog implements ActionListener
             btñ.setBounds(l,u,50,40); 
             btñ.setFont(new Font("Arial", Font.BOLD, 12));
             matriz[k][h]=btñ;
+            matriz[k][h].addActionListener(this);
             add(matriz[k][h]);
             matriz[k][h].addActionListener(this);
 
@@ -119,6 +127,7 @@ public class Jugar3 extends JDialog implements ActionListener
             btñ.setBounds(l,u,50,40); 
             btñ.setFont(new Font("Arial", Font.BOLD, 12));
             matriz[k][h]=btñ;
+            matriz[k][h].addActionListener(this);
             add(matriz[k][h]);
 
             l=l+51;
@@ -144,6 +153,7 @@ public class Jugar3 extends JDialog implements ActionListener
             btñ.setBounds(l,u,50,40); 
             btñ.setFont(new Font("Arial", Font.BOLD, 12));
             matriz[k][h]=btñ;
+            matriz[k][h].addActionListener(this);
             add(matriz[k][h]);
 
             l=l+51;
@@ -170,6 +180,7 @@ public class Jugar3 extends JDialog implements ActionListener
             btñ.setBounds(l,u,50,40); 
             btñ.setFont(new Font("Arial", Font.BOLD, 12));
             matriz[k][h]=btñ;
+            matriz[k][h].addActionListener(this);
             add(matriz[k][h]);
 
             l=l+51;
@@ -186,8 +197,8 @@ public class Jugar3 extends JDialog implements ActionListener
 
 
     }
-    btComprobar =matriz[x][y];
-    btComprobar.addActionListener(this);
+    /*btComprobar =matriz[x][y];
+    btComprobar.addActionListener(this);*/
     
     //creacion y adicion de label titulo
     JLabel lbJuego3= new JLabel("ENCUENTRA EL CARACTER DIFERENTE");
@@ -202,7 +213,7 @@ public class Jugar3 extends JDialog implements ActionListener
 
        
     //creacion y adicion de la imagen
-    iImagen = new ImageIcon(getClass().getResource("/vista/Juego3.png"));
+    iImagen = new ImageIcon(getClass().getResource("/vista/img/Juego3.png"));
     lbImagen= new JLabel(iImagen);
     lbImagen.setBounds(0,0,900,506);
     add(lbImagen);
@@ -211,7 +222,7 @@ public class Jugar3 extends JDialog implements ActionListener
     }
     public void actionPerformed(ActionEvent e) 
     {
-        if (e.getSource() == btComprobar) 
+        if (e.getSource() == matriz[x][y]) 
         {
             
             miDialogoJ3 = new DialogoJ3();
@@ -219,7 +230,12 @@ public class Jugar3 extends JDialog implements ActionListener
             
             
         }
-        this.dispose();
+        if(e.getSource()!= matriz[x][y])
+        {
+            JOptionPane.showMessageDialog(null,"Sigue intentando");
+            
+        }
+        
     }
 
   

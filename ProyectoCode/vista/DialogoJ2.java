@@ -49,7 +49,7 @@ public class DialogoJ2 extends JDialog implements ActionListener
         btSalir.addActionListener(this);
 
         //creacion y adicion de la imagen
-        iImagen = new ImageIcon(getClass().getResource("/vista/win.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/win.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(125,55,100,100);
         add(lbImagen);

@@ -42,36 +42,33 @@ public class Jugar4 extends JDialog implements ActionListener
     public Jugar4()
     {
         //Definición del layout del Dialogo
+        Juego j4 = new Juego("Identifique imagen");
         this.setLayout(null);
-
-        //Caracteristicas de la ventana
-        this.setTitle("Juego4");
-        this.setSize(900,556);
+        this.setTitle(j4.getNombre());
+        this.setSize(j4.getWidth(),j4.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
         
-        imagen.add("CARRO");
-        imagen.add("LAPIZ");
-        imagen.add("FRUTA");
-        imagen.add("BOTELLA");
-        imagen.add("MOTO");
-      
-        Collections.shuffle(imagen);
-        Random rand = new Random();
-        palabraAleatoria = imagen.get(rand.nextInt(imagen.size()));
+             
+        //Collections.shuffle(imagen);
+       
+        palabraAleatoria = j4.getImagenAleatoria();
        
 
 
-        iImagenAleatoria = new ImageIcon(getClass().getResource("/vista/"+palabraAleatoria+".png"));
+        iImagenAleatoria = new ImageIcon(getClass().getResource("/vista/img/"+palabraAleatoria+".png"));
         lbImagenAleatoria= new JLabel(iImagenAleatoria);
         lbImagenAleatoria.setBounds(386,170,128,128);
         add(lbImagenAleatoria);
-        
-        for(int k=0 ,p=50;k<imagen.size();k++)
+        j4.reordenarMatriz();
+
+        //poner botones random
+        for(int k=0 ,p=50;k<5;k++)
         {
-        String palabraAleatoriabt = imagen.get(k);
-        bt1 = new JButton(palabraAleatoriabt);
+        
+        String palabraRandom = j4.getPalabraRandom(k);
+        bt1 = new JButton(palabraRandom);
         bt1.setFont(new Font("Gill Sans MT", Font.BOLD, 13));
         bt1.setBounds(p,430,150,50); 
         lista[k]=bt1;
@@ -83,7 +80,7 @@ public class Jugar4 extends JDialog implements ActionListener
         
 
         //creacion y adicion de la imagen
-        iImagen = new ImageIcon(getClass().getResource("/vista/Juego1.png"));
+        iImagen = new ImageIcon(getClass().getResource("/vista/img/Juego1.png"));
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
