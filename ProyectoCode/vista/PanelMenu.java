@@ -15,8 +15,8 @@ public class PanelMenu extends JDialog
     //----------------------
     private JButton btJugar1;
     private JButton btJugar2,btJugar3, btJugar4;
-    private JLabel lbImagen, lbAhorcado, lbArreglar, lbCaracteres;
-    private ImageIcon iImagen, ahorcado, iArreglar, iCaracteres;
+    private JLabel lbImagen, lbAhorcado, lbArreglar, lbCaracteres, lbIdentificar;
+    private ImageIcon iImagen, ahorcado, iArreglar, iCaracteres, iIdentificar;
     private JLabel lbActividades;
     //----------------------
     // Metodos
@@ -86,6 +86,14 @@ public class PanelMenu extends JDialog
         btJugar4.setActionCommand("jugar4");
         btJugar4.setBackground(blanco);
         this.add(btJugar4);
+
+        //añadir imagen identificar
+        iIdentificar = new ImageIcon(getClass().getResource("/vista/img/identificar.png"));
+        lbIdentificar = new JLabel(iIdentificar);
+        lbIdentificar.setBounds(650,150,170,170);
+        add(lbIdentificar);
+
+
 
 
 

@@ -26,7 +26,7 @@ public class Jugar4 extends JDialog implements ActionListener
     //----------------------
     private JButton btJugar1, btComprobar;
     private JLabel lbErrores;
-    private JLabel lbImagen,lbImagenAleatoria, lbInstrucciones, lbJuego1;
+    private JLabel lbImagen,lbImagenAleatoria, lbInstrucciones, lbJuego4;
     private ImageIcon iImagen,iImagenAleatoria;
     private int contadorErrores;
     private JTextField tfLetra;
@@ -77,6 +77,18 @@ public class Jugar4 extends JDialog implements ActionListener
         p=p+160;
         }
 
+        //label titulo
+        lbJuego4= new JLabel("IDENTIFICA LA IMAGEN");
+        lbJuego4.setFont(new Font("Gill Sans MT", Font.BOLD, 20));
+        lbJuego4.setBounds(90,10,400,100);
+        this.add(lbJuego4);
+                
+        //Ccreacion del label
+        lbInstrucciones = new JLabel("SELECCIONE LA PALABRA QUE REPRESENTA LA IMAGEN", JLabel.CENTER);
+        lbInstrucciones.setFont(new Font("Gill Sans MT", Font.BOLD, 15));
+        lbInstrucciones.setBounds(50,350,800,100);
+        this.add(lbInstrucciones);
+
         
 
         //creacion y adicion de la imagen
@@ -84,6 +96,8 @@ public class Jugar4 extends JDialog implements ActionListener
         lbImagen= new JLabel(iImagen);
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
+
+
 
 
 
