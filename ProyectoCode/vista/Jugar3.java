@@ -58,8 +58,8 @@ public class Jugar3 extends JDialog implements ActionListener
         Random random = new Random();
         //int v = random.nextInt(5);
         
-        x = random.nextInt(10);
-        y = random.nextInt(10);
+        x = j3.getNumeroRandom();
+        y = j3.getNumeroRandom();
 
         
 
@@ -89,7 +89,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
 
         matriz[x][y].setText(caracterDiferente);
-        lbPista.setText("PISTA » n");
+        lbPista.setText("PISTA » "+caracterDiferente);
     }
     /*if(v==1)
     {

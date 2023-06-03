@@ -13,7 +13,7 @@ public class Juego
     private String nombre,caracter,caracterDiferente;
     private final static int whidt=900;
     private final static int height=556;
-    private int R;
+    private int r,numeroRandom;
     public Juego(String nombre)
     {
         this.nombre =nombre;
@@ -106,18 +106,27 @@ public class Juego
 
     public String getCaracterRandom()
     {
-        String [] caracteres = {"h","V",":("};
+        String [] caracteres = {"h","V",":(","p","q","U","n","E","F","$","S","B","P","L","I"};
         Random rand = new Random();
-        R = rand.nextInt(caracteres.length); 
-        caracter = caracteres[R];
+        r = rand.nextInt(caracteres.length); 
+        caracter = caracteres[r];
         return caracter;
 
     }
     public String getCaracterDiferente()
     {
-        String [] caracteres = {"n","U",":)"};
-        caracterDiferente = caracteres[R];
+        String [] caracteres = {"n","U",":)","q","p","V","h","F","E","S","$","P","B","I","L"};
+        caracterDiferente = caracteres[r];
         return caracterDiferente;
 
     }
+    public int getNumeroRandom()
+    {
+        Random random = new Random();
+        
+        
+        numeroRandom = random.nextInt(10);
+        return numeroRandom;
+    }
+    
 }
