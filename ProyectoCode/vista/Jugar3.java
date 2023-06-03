@@ -91,114 +91,6 @@ public class Jugar3 extends JDialog implements ActionListener
         matriz[x][y].setText(caracterDiferente);
         lbPista.setText("PISTA » "+caracterDiferente);
     }
-    /*if(v==1)
-    {
-        for(int k=0,u=90;k<10;k++)
-        {
-            
-            for(int h=0,l=40;h<10;h++)
-            {
-            JButton btñ = new JButton("V");
-            btñ.setBounds(l,u,50,40); 
-            btñ.setFont(new Font("Arial", Font.BOLD, 12));
-            matriz[k][h]=btñ;
-            matriz[k][h].addActionListener(this);
-            add(matriz[k][h]);
-            matriz[k][h].addActionListener(this);
-
-            l=l+51;
-            
-            }
-            u=u+41;
-        }
-        
-        
-        matriz[x][y].setText("U");
-        lbPista.setText("PISTA » U");
-    }
-    if(v==2)
-    {
-        for(int k=0,u=90;k<10;k++)
-        {
-            
-            for(int h=0,l=40;h<10;h++)
-            {
-            JButton btñ = new JButton(":(");
-            btñ.setBounds(l,u,50,40); 
-            btñ.setFont(new Font("Arial", Font.BOLD, 12));
-            matriz[k][h]=btñ;
-            matriz[k][h].addActionListener(this);
-            add(matriz[k][h]);
-
-            l=l+51;
-            
-            }
-            u=u+41;
-        }
-        
-        
-        
-
-        matriz[x][y].setText(":)");
-        lbPista.setText("PISTA » :)");
-    }
-    if(v==3)
-    {
-        for(int k=0,u=90;k<10;k++)
-        {
-            
-            for(int h=0,l=40;h<10;h++)
-            {
-            JButton btñ = new JButton("h");
-            btñ.setBounds(l,u,50,40); 
-            btñ.setFont(new Font("Arial", Font.BOLD, 12));
-            matriz[k][h]=btñ;
-            matriz[k][h].addActionListener(this);
-            add(matriz[k][h]);
-
-            l=l+51;
-            
-            }
-            u=u+41;
-        }
-        
-        
-        
-
-        matriz[x][y].setText("n");
-        lbPista.setText("PISTA » n");
-    }
-
-    if(v==4)
-    {
-        for(int k=0,u=90;k<10;k++)
-        {
-            
-            for(int h=0,l=40;h<10;h++)
-            {
-            JButton btñ = new JButton("q");
-            btñ.setBounds(l,u,50,40); 
-            btñ.setFont(new Font("Arial", Font.BOLD, 12));
-            matriz[k][h]=btñ;
-            matriz[k][h].addActionListener(this);
-            add(matriz[k][h]);
-
-            l=l+51;
-            
-            }
-            u=u+41;
-        }
-        
-        
-        
-
-        matriz[x][y].setText("p");
-        lbPista.setText("PISTA » p");
-
-
-    }
-    /*btComprobar =matriz[x][y];
-    btComprobar.addActionListener(this);*/
     
     //creacion y adicion de label titulo
     JLabel lbJuego3= new JLabel("ENCUENTRA EL CARACTER DIFERENTE");
@@ -207,9 +99,6 @@ public class Jugar3 extends JDialog implements ActionListener
     add(lbJuego3);
 
 
-
-
-        
 
        
     //creacion y adicion de la imagen
