@@ -97,10 +97,6 @@ public class PanelMenu extends JDialog
 
 
 
-
-
-
-
         //creacion y adicion de la imagen
         iImagen = new ImageIcon(getClass().getResource("/vista/img/panelMenu.png"));
         lbImagen= new JLabel(iImagen);
