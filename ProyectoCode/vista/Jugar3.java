@@ -56,7 +56,7 @@ public class Jugar3 extends JDialog implements ActionListener
         
         
         Random random = new Random();
-        //int v = random.nextInt(5);
+        //*-
         
         x = j3.getNumeroRandom();
         y = j3.getNumeroRandom();

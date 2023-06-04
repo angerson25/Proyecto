@@ -99,7 +99,7 @@ public class Jugar1 extends JDialog implements ActionListener
         for(int k=0;k<palabraAleatoria.length();k++)
         {
         JLabel j= new JLabel(Character.toString( palabraAleatoria.charAt(k)));
-        j.setFont(new Font("Gill Sans MT", Font.BOLD, 18));
+        j.setFont(new Font("Gill Sans MT", Font.BOLD, 34));
         j.setBounds(p, 90, 40, 40);
         j.setVisible(false);
         cajas.add(j);
@@ -112,6 +112,7 @@ public class Jugar1 extends JDialog implements ActionListener
         {
         JLabel j= new JLabel("__");
         j.setBounds(q, 100, 40, 40);
+        j.setFont(new Font("Gill Sans MT", Font.BOLD, 34));
         j.setVisible(true);
         q=q+50;
         add(j);

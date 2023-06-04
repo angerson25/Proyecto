@@ -19,7 +19,7 @@ public class Juego
         this.nombre =nombre;
 
     }
-
+    //metodo que agrega y selecciona una palabra random.
     public String getPalabraAleatoria()
     {
         palabraAleatoria="";
@@ -57,6 +57,8 @@ public class Juego
         return palabraAleatoria;
 
     }
+
+
     public String getImagenAleatoria()
     {
         palabraAleatoria="";
@@ -72,6 +74,8 @@ public class Juego
         return palabraAleatoria;
 
     }
+
+
     public String invertirPalabra()
     {
         String palabraInvertida = "";
@@ -81,10 +85,14 @@ public class Juego
         }
         return palabraInvertida;
     }
+
+
     public String getNombre()
     {
         return nombre;
+
     }
+
     public int getWidth()
     {
         return whidt;
@@ -95,14 +103,18 @@ public class Juego
         return height;
     }
 
+
     public void reordenarMatriz()
     {
         Collections.shuffle(imagen);
     }
+
+
     public String getPalabraRandom(int k)
     {
         return imagen.get(k);
     }
+
 
     public String getCaracterRandom()
     {
@@ -113,6 +125,7 @@ public class Juego
         return caracter;
 
     }
+
     public String getCaracterDiferente()
     {
         String [] caracteres = {"n","U",":)","q","p","V","h","F","E","S","$","P","B","I","L"};
@@ -120,6 +133,8 @@ public class Juego
         return caracterDiferente;
 
     }
+
+
     public int getNumeroRandom()
     {
         Random random = new Random();
