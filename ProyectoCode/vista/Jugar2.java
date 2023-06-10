@@ -1,21 +1,15 @@
+//importamos todos los paquetes necesarios para el juego
 package vista;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
 import modelo.Juego;
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Random;
 import java.awt.Font;
 import javax.swing.ImageIcon;
-import modelo.Juego;
-
 public class Jugar2 extends JDialog implements ActionListener 
 {
 
@@ -39,26 +33,25 @@ public class Jugar2 extends JDialog implements ActionListener
     public Jugar2()
     {
         
-        //Definición del layout del Dialogo
-        this.setLayout(null);
-        //array list
-        Juego j2 = new Juego("invertirPalabra");
-        palabraAleatoria = j2.getPalabraAleatoria();
-        palabraInvertida = j2.invertirPalabra();
-
         //Caracteristicas de la ventana
+
+        this.setLayout(null);
+        Juego j2 = new Juego("invertirPalabra");
         this.setTitle(j2.getNombre());
         this.setSize(j2.getWidth(),j2.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
+        
+        // Tomamos palabra aleatoria y la invertimos
+        palabraAleatoria = j2.getPalabraAleatoria();
+        palabraInvertida = j2.invertirPalabra();
 
         //label titulo
         lbJuego2= new JLabel("ARREGLAR LA PALABRA");
         lbJuego2.setFont(new Font("Gill Sans MT", Font.BOLD, 20));
         lbJuego2.setBounds(50,28,600,40);
         Color blanco =new Color(255,255,255);
-        
         add(lbJuego2);
 
         //label Palabra invertida
@@ -111,7 +104,7 @@ public class Jugar2 extends JDialog implements ActionListener
     }
 
     
-
+    //control de acciones para los botones
     public void actionPerformed(ActionEvent e) 
     {
         if (e.getSource() == btComprobar) 

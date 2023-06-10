@@ -1,5 +1,6 @@
-package vista;
+//Inmportamos los paquetes necesarios para el juego
 
+package vista;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -8,14 +9,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.Juego;
 import java.awt.Color;
-import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Random;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 
 public class Jugar1 extends JDialog implements ActionListener
@@ -37,19 +34,17 @@ public class Jugar1 extends JDialog implements ActionListener
     //----------------------
     public Jugar1()
     {
-        //Definición del layout del Dialogo
+        //Caracteristicas de la ventana
         this.setLayout(null);
         Juego j1 = new Juego("ahorcado");
-
-        //Caracteristicas de la ventana
         this.setTitle(j1.getNombre());
         this.setSize(j1.getWidth(),j1.getHeight());
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
         
+
         //palabra aleatoria
-        
         palabraAleatoria = j1.getPalabraAleatoria();
 
         //LABEL INSTRUCCIONES
@@ -94,7 +89,7 @@ public class Jugar1 extends JDialog implements ActionListener
         lbErrores.setBounds(600, 10, 150, 100);
         this.add(lbErrores);
 
-
+        //Creamos labels para la palabra aleatoria
         int p=140;
         for(int k=0;k<palabraAleatoria.length();k++)
         {
@@ -107,6 +102,7 @@ public class Jugar1 extends JDialog implements ActionListener
         add(cajas.get(k));
         }
 
+        //Creamos labels para los espacios de la palabra aleatoria
         int q=140;
         for(int k=0;k<palabraAleatoria.length();k++)
         {
@@ -125,12 +121,12 @@ public class Jugar1 extends JDialog implements ActionListener
         lbImagen.setBounds(0,0,900,506);
         add(lbImagen);
     }
-
+    //Control de acciones para los botones 
     public void actionPerformed(ActionEvent e) 
     {
         if (e.getSource() == btComprobar) 
         {
-            
+            //caso si digita mas de una letra
             if(tfLetra.getText().length()!=1)
             {
                 JOptionPane.showMessageDialog(null,"Digita una letra, por favor");

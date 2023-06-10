@@ -1,12 +1,11 @@
+//importamos todos los paquetes nesesarios para el juego
 package vista;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 import modelo.Juego;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -21,7 +20,7 @@ public class Jugar3 extends JDialog implements ActionListener
     // Atributos
     //----------------------
     Random random = new Random();
-    private JButton btJugar1, btComprobar,btñ;
+    private JButton btJugar1,btñ;
     public DialogoJ3 miDialogoJ3 =null;
     private JButton matriz[][] = new JButton[10][10];
     private ImageIcon iImagen;
@@ -35,7 +34,7 @@ public class Jugar3 extends JDialog implements ActionListener
     //----------------------
     public Jugar3()
     {
-        //Definición del layout del Dialogo
+        //Caracteristicas de la ventana
         Juego j3 = new Juego("Encontrar el caracter difetente");
         this.setLayout(null);
         this.setTitle(j3.getNombre());
@@ -52,22 +51,15 @@ public class Jugar3 extends JDialog implements ActionListener
         lbPista.setBounds(620,160,600,40);
         add(lbPista);
         
-        //crear matriz
-        
-        
-        Random random = new Random();
-        //*-
-        
+        // Tomamos dos numeros random 
         x = j3.getNumeroRandom();
         y = j3.getNumeroRandom();
 
-        
-
-        //mostrar la matriz
-    //if(v==0)
-    {
+        // Tomamos el caracter y el caracter diferente
         caracter = j3.getCaracterRandom();
         caracterDiferente = j3.getCaracterDiferente();
+
+        //Creamos matriz
         for(int k=0,u=90;k<10;k++)
         {
             
@@ -87,10 +79,10 @@ public class Jugar3 extends JDialog implements ActionListener
         }
         
         
-
+        // Tonemos el caracter diferente en una pocision aleatoria
         matriz[x][y].setText(caracterDiferente);
         lbPista.setText("PISTA » "+caracterDiferente);
-    }
+    
     
     //creacion y adicion de label titulo
     JLabel lbJuego3= new JLabel("ENCUENTRA EL CARACTER DIFERENTE");
