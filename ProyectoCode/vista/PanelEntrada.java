@@ -14,7 +14,7 @@ public class PanelEntrada extends JPanel
     //----------------------
     //Atributos
     //----------------------
-    private JLabel lbImagen, lbAyuda, lbAyuda2, lbAyuda3;
+    private JLabel lbImagen, lbAyuda, lbAyuda2;
     private ImageIcon iImagen;
     private JButton btEntrar;
     
@@ -44,7 +44,7 @@ public class PanelEntrada extends JPanel
         this.add(btEntrar);
 
 
-        
+        //crear label 
         lbAyuda= new JLabel("AYUDA PARA PERSONAS CON DISLEXIA");
         lbAyuda.setFont(new Font("Gill Sans MT", Font.BOLD, 20));
         lbAyuda.setBounds(60,280,470,50);
@@ -52,19 +52,14 @@ public class PanelEntrada extends JPanel
         lbAyuda.setForeground(blanco);
         add(lbAyuda);
        
-        //crear label
+        //crear label titulo
         lbAyuda2= new JLabel("DISLEXY");
         lbAyuda2.setFont(new Font("Gill Sans MT", Font.BOLD, 89));
         lbAyuda2.setBounds(54,190,470,80);
         lbAyuda2.setForeground(blanco);
         add(lbAyuda2);
 
-        //crear label
-        /*lbAyuda3= new JLabel("DISLEXIA");
-        lbAyuda3.setFont(new Font("Gill Sans MT", Font.BOLD, 100));
-        lbAyuda3.setBounds(44,170,770,250);
-        lbAyuda3.setForeground(blanco);
-        add(lbAyuda3);*/
+        
 
         //creacion y adicion de la imagen de fondo
         iImagen = new ImageIcon(getClass().getResource("/vista/img/PantallaPrincipal.png"));

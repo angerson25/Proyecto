@@ -56,15 +56,15 @@ public class Jugar2 extends JDialog implements ActionListener
 
         //label Palabra invertida
         lbPalabraInvertida= new JLabel("PALABRA INVERTIDA » ");
-        lbPalabraInvertida.setFont(new Font("Gill Sans MT", Font.BOLD, 22));
+        lbPalabraInvertida.setFont(new Font("Gill Sans MT", Font.BOLD, 30));
         lbPalabraInvertida.setBounds(40,190,650,40);
         lbPalabraInvertida.setForeground(blanco);
         add(lbPalabraInvertida);
 
         //label palabra aleatoria
-        lbPalabraInvertida1= new JLabel(palabraInvertida, JLabel.CENTER);
-        lbPalabraInvertida1.setFont(new Font("Gill Sans MT", Font.BOLD, 25));
-        lbPalabraInvertida1.setBounds(300,190,300,40);
+        lbPalabraInvertida1= new JLabel(palabraInvertida);
+        lbPalabraInvertida1.setFont(new Font("Gill Sans MT", Font.BOLD, 30));
+        lbPalabraInvertida1.setBounds(460,190,300,40);
         lbPalabraInvertida1.setForeground(blanco);
         add(lbPalabraInvertida1);
 
