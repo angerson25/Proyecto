@@ -1,11 +1,10 @@
+//Importamos paquetes para el controlador
 package controlador;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 import modelo.Juego;
 import vista.VentanaPrincipal;
-import vista.PanelMenu;
+
 
 public class Controlador implements ActionListener
 {
@@ -13,19 +12,11 @@ public class Controlador implements ActionListener
     //Atributos
     //----------------------------
     private VentanaPrincipal venPrin;
-    private Juego model;
-    private Object miPanelEntrada;
-    
-    
-    //----------------------------
-    //Metodos
-    //----------------------------
     
     //Constructor
     public Controlador(VentanaPrincipal pVenPrin, Juego pModel)
     {
         this.venPrin = pVenPrin;
-        this.model = pModel;
         this.venPrin.miPanelEntrada.agregarOyentesBotones(this);
         this.venPrin.miPanelMenu.agregarOyentesBotones(this);
         
@@ -33,12 +24,12 @@ public class Controlador implements ActionListener
         
     }
     
-    @Override
+    //control de botones para el acceso a los juegos
     public void actionPerformed(ActionEvent ae) 
     {
-        //Identificar el comendo generado (calcular, borrar, salir)
+       
         String comando = ae.getActionCommand();
-
+        //abrir dialogo menu 
         if(comando.equals("entrar"))
         {
             

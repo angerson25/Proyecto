@@ -101,6 +101,7 @@ public class Jugar3 extends JDialog implements ActionListener
 
         
     }
+    //Control de acciones para los botones 
     public void actionPerformed(ActionEvent e) 
     {
         if (e.getSource() == matriz[x][y]) 

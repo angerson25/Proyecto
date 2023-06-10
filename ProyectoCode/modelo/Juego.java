@@ -7,7 +7,7 @@ public class Juego
 {
     //atributos
     ArrayList<String> palabras = new ArrayList<String>();
-    private String palabraAleatoria,imagenAleatoria;
+    private String palabraAleatoria;
     ArrayList<String> imagen = new ArrayList<String>();
 
     private String nombre,caracter,caracterDiferente;

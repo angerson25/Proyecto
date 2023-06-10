@@ -1,22 +1,15 @@
+//importamos todos los paquetes para el juego
 package vista;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import modelo.Juego;
-import java.awt.Color;
-import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+
 
 
 public class Jugar4 extends JDialog implements ActionListener
@@ -24,15 +17,12 @@ public class Jugar4 extends JDialog implements ActionListener
     //----------------------
     // Atributos
     //----------------------
-    private JButton btJugar1, btComprobar;
-    private JLabel lbErrores;
+  
     private JLabel lbImagen,lbImagenAleatoria, lbInstrucciones, lbJuego4;
     private ImageIcon iImagen,iImagenAleatoria;
-    private int contadorErrores;
-    private JTextField tfLetra;
+ 
     private String palabraAleatoria;
-    private JButton bt1,btRta;
-    private String imagenAleatoria;
+    private JButton bt1;
     private JButton lista[] = new JButton[5];
     ArrayList<String> imagen = new ArrayList<>();
     
@@ -41,7 +31,7 @@ public class Jugar4 extends JDialog implements ActionListener
     //----------------------
     public Jugar4()
     {
-        //Definición del layout del Dialogo
+        //caracteristicas de la ventana
         Juego j4 = new Juego("Identifique imagen");
         this.setLayout(null);
         this.setTitle(j4.getNombre());
@@ -50,13 +40,11 @@ public class Jugar4 extends JDialog implements ActionListener
         this.setResizable(false);
         this.setVisible(true);
         
-             
-        //Collections.shuffle(imagen);
-       
+       //Tomamos palabra aleatoria y imagen random
         palabraAleatoria = j4.getImagenAleatoria();
        
 
-
+        // Agregamos la imagen random
         iImagenAleatoria = new ImageIcon(getClass().getResource("/vista/img/"+palabraAleatoria+".png"));
         lbImagenAleatoria= new JLabel(iImagenAleatoria);
         lbImagenAleatoria.setBounds(386,170,128,128);
@@ -83,7 +71,7 @@ public class Jugar4 extends JDialog implements ActionListener
         lbJuego4.setBounds(90,10,400,100);
         this.add(lbJuego4);
                 
-        //Ccreacion del label
+        //Creacion del label informacion
         lbInstrucciones = new JLabel("SELECCIONE LA PALABRA QUE REPRESENTA LA IMAGEN", JLabel.CENTER);
         lbInstrucciones.setFont(new Font("Gill Sans MT", Font.BOLD, 15));
         lbInstrucciones.setBounds(50,350,800,100);
@@ -105,7 +93,7 @@ public class Jugar4 extends JDialog implements ActionListener
 
     }
 
-    //metodo para el boton jugar
+    //Control de acciones para los botones 
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == lista[0]) 

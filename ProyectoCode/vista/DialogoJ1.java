@@ -1,5 +1,5 @@
+//importamos paquetes para el dialogo
 package vista;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -12,14 +12,15 @@ import java.awt.event.ActionEvent;
 
 public class DialogoJ1 extends JDialog implements ActionListener
 {
-    //atributo
+    //atributos
    
     private JLabel lbImagen;
     private ImageIcon iImagen;
     public Jugar1 miJugar1 =null;
-    
     private JButton btContinuar;
     private JButton btSalir;
+
+
     public DialogoJ1()
     {
         this.setLayout(null);
@@ -32,7 +33,7 @@ public class DialogoJ1 extends JDialog implements ActionListener
         this.setVisible(true);
 
       
-
+        //creacion de boton Continuar
         btContinuar = new JButton("DE NUEVO");
         btContinuar.setBounds(75,190,200,25);
         btContinuar.setActionCommand("continuarJ2");
@@ -41,7 +42,8 @@ public class DialogoJ1 extends JDialog implements ActionListener
         btContinuar.setBackground(morado);
         this.add(btContinuar);        
         btContinuar.addActionListener(this);
-
+        
+        //creacion de boton salir
         btSalir = new JButton("MENU");
         btSalir.setBounds(75,220,200,25);
         btSalir.setActionCommand("SalirJ2");
@@ -59,6 +61,7 @@ public class DialogoJ1 extends JDialog implements ActionListener
 
         
     }
+    //Control de acciones para los botones 
     public void actionPerformed(ActionEvent e) 
     {
         if (e.getSource() == btContinuar) 

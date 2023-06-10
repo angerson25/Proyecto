@@ -44,27 +44,27 @@ public class PanelEntrada extends JPanel
         this.add(btEntrar);
 
 
-        //crear label
-        lbAyuda= new JLabel("A Y U D A    P A R A");
-        lbAyuda.setFont(new Font("Gill Sans MT", Font.BOLD, 40));
-        lbAyuda.setBounds(60,150,470,50);
+        
+        lbAyuda= new JLabel("AYUDA PARA PERSONAS CON DISLEXIA");
+        lbAyuda.setFont(new Font("Gill Sans MT", Font.BOLD, 20));
+        lbAyuda.setBounds(60,280,470,50);
         Color blanco =new Color(255,255,255);
         lbAyuda.setForeground(blanco);
         add(lbAyuda);
-
+       
         //crear label
-        lbAyuda2= new JLabel("P E R S O N A S   C O N");
-        lbAyuda2.setFont(new Font("Gill Sans MT", Font.BOLD, 40));
-        lbAyuda2.setBounds(54,190,470,50);
+        lbAyuda2= new JLabel("DISLEXY");
+        lbAyuda2.setFont(new Font("Gill Sans MT", Font.BOLD, 89));
+        lbAyuda2.setBounds(54,190,470,80);
         lbAyuda2.setForeground(blanco);
         add(lbAyuda2);
 
         //crear label
-        lbAyuda3= new JLabel("DISLEXIA");
+        /*lbAyuda3= new JLabel("DISLEXIA");
         lbAyuda3.setFont(new Font("Gill Sans MT", Font.BOLD, 100));
         lbAyuda3.setBounds(44,170,770,250);
         lbAyuda3.setForeground(blanco);
-        add(lbAyuda3);
+        add(lbAyuda3);*/
 
         //creacion y adicion de la imagen de fondo
         iImagen = new ImageIcon(getClass().getResource("/vista/img/PantallaPrincipal.png"));
